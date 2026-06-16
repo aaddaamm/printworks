@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robinson Printworks | Custom 3D Printing Services</title>
+    <meta
+      name="description"
+      content="Custom 3D printing for prototypes, replacement parts, models, gifts, and small-batch projects. Request a quote for your next print."
+    />
+    <link rel="canonical" href="https://prints.adamrobinson.tech/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prints.adamrobinson.tech/" />
+    <meta
+      property="og:title"
+      content="Robinson Printworks | Custom 3D Printing"
+    />
+    <meta
+      property="og:description"
+      content="Custom 3D printing for prototypes, replacement parts, models, gifts, and small-batch projects."
+    />
+    <meta property="og:site_name" content="Robinson Printworks" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Robinson Printworks | Custom 3D Printing"
+    />
+    <meta
+      name="twitter:description"
+      content="Custom 3D printing for prototypes, replacement parts, models, gifts, and small-batch projects."
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="logo" href="#top">Robinson Printworks</a>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#quote">Get a Quote</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-content">
+          <p class="eyebrow">Custom 3D printing</p>
+          <h1>Bring your ideas, parts, and prototypes to life.</h1>
+          <p class="hero-copy">
+            Affordable 3D printing for functional parts, tabletop models, gifts,
+            prototypes, repairs, and small production runs.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#quote">Request a quote</a>
+            <a class="button secondary" href="#services">View services</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Service highlights">
+          <span>Fast local turnaround</span>
+          <span>PLA, PETG, TPU, and more</span>
+          <span>One-off and small batches</span>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">What I print</p>
+          <h2>Useful prints for real projects.</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Prototypes</h3>
+            <p>
+              Test fit, form, and function before committing to final
+              manufacturing.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Replacement parts</h3>
+            <p>
+              Knobs, brackets, clips, mounts, adapters, and other hard-to-find
+              parts.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Models & gifts</h3>
+            <p>
+              Decor, tabletop accessories, personalized gifts, and display
+              pieces.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Small batches</h3>
+            <p>
+              Short-run printing for events, product tests, and repeatable
+              parts.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="process" class="section split">
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2>Simple quote, clear expectations.</h2>
+          <p>
+            Send over your file or idea, and I’ll review printability, material
+            options, estimated timing, and price before anything is made.
+          </p>
+        </div>
+        <ol class="steps">
+          <li>
+            <strong>Share your idea</strong
+            ><span>Upload or link an STL, 3MF, OBJ, sketch, or reference.</span>
+          </li>
+          <li>
+            <strong>Get a quote</strong
+            ><span
+              >I’ll confirm material, size, finish, timeline, and cost.</span
+            >
+          </li>
+          <li>
+            <strong>Approve the print</strong
+            ><span
+              >Once approved, I print, inspect, and package your order.</span
+            >
+          </li>
+        </ol>
+      </section>
+
+      <section class="section materials">
+        <div class="section-heading">
+          <p class="eyebrow">Materials</p>
+          <h2>Options for different needs.</h2>
+        </div>
+        <div class="pill-list" aria-label="Available materials">
+          <span>PLA</span>
+          <span>PETG</span>
+          <span>TPU</span>
+          <span>ABS / ASA by request</span>
+          <span>Multiple colors</span>
+          <span>Basic cleanup</span>
+        </div>
+      </section>
+
+      <section id="quote" class="section quote">
+        <div>
+          <p class="eyebrow">Ready to print?</p>
+          <h2>Request a custom quote.</h2>
+          <p>
+            Tell me what you need, the rough size, quantity, preferred material
+            or color, and when you need it by. If you have a file, include a
+            link or attach it in your message.
+          </p>
+        </div>
+        <div class="quote-card">
+          <a
+            class="button primary full"
+            href="mailto:adam@adamrobinson.tech?subject=3D%20Printing%20Quote%20Request"
+          >
+            Email for a quote
+          </a>
+          <p class="small-note">
+            Email <strong>adam@adamrobinson.tech</strong> with your project
+            details.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        © <span id="year"></span> Robinson Printworks. Custom 3D printing
+        services.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
