@@ -83,7 +83,7 @@ a {
 
 .logo img {
 	display: block;
-	width: 210px;
+	width: 280px;
 	height: auto;
 	filter: drop-shadow(0 0 18px rgba(217, 70, 239, 0.32));
 }
@@ -415,7 +415,7 @@ h3 {
 	}
 
 	.logo img {
-		width: 180px;
+		width: 220px;
 	}
 
 	.section {
