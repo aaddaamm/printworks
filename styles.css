@@ -434,13 +434,7 @@ h3 {
 }
 
 .split {
-	width: min(1800px, calc(100% - 120px));
-	grid-template-columns: minmax(760px, 0.9fr) minmax(640px, 1fr);
-	gap: 80px;
-}
-
-.split h2 span {
-	white-space: nowrap;
+	grid-template-columns: 1fr 1fr;
 }
 
 .quote {
@@ -580,14 +574,6 @@ h3 {
 
 .site-footer p {
 	margin: 0;
-}
-
-@media (max-width: 1200px) {
-	.split {
-		width: min(1120px, calc(100% - 32px));
-		grid-template-columns: 1fr 1fr;
-		gap: 40px;
-	}
 }
 
 @media (max-width: 860px) {
