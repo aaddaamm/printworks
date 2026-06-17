@@ -26,7 +26,7 @@ Then visit `http://localhost:5173`.
 Recommended domain:
 
 ```text
-prints.adamrobinson.tech
+printworks.adamrobinson.tech
 ```
 
 This site is static HTML/CSS and can be imported directly into Vercel.

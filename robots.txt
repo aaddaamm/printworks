@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://prints.adamrobinson.tech/sitemap.xml
+Sitemap: https://printworks.adamrobinson.tech/sitemap.xml
