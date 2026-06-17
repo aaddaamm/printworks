@@ -56,6 +56,32 @@ a {
 	text-decoration: none;
 }
 
+a:focus-visible,
+.button:focus-visible {
+	outline: 2px solid var(--neon-green);
+	outline-offset: 4px;
+}
+
+.skip-link {
+	position: fixed;
+	top: 12px;
+	left: 12px;
+	z-index: 100;
+	padding: 10px 14px;
+	border: 1px solid var(--neon-line);
+	border-radius: 999px;
+	background: #020617;
+	color: var(--text);
+	font-weight: 800;
+	box-shadow: var(--neon-shadow);
+	transform: translateY(-140%);
+	transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+	transform: translateY(0);
+}
+
 .site-header {
 	position: sticky;
 	top: 0;
@@ -274,7 +300,12 @@ h3 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.button {
+	html {
+		scroll-behavior: auto;
+	}
+
+	.button,
+	.skip-link {
 		transition: none;
 	}
 
