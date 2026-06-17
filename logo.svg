@@ -8,7 +8,7 @@
       <stop offset="1" stop-color="#ff2bd6" />
     </linearGradient>
     <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feGaussianBlur stdDeviation="1.2" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
@@ -16,7 +16,11 @@
     </filter>
   </defs>
   <rect width="520" height="120" rx="28" fill="#020617" />
-  <g filter="url(#glow)">
+  <g filter="url(#glow)" opacity="0.75">
+    <path d="M32 44h64v44H32zM46 24h36v22H46zM46 72h36" fill="none" stroke="url(#cyanPink)" stroke-width="7" stroke-linejoin="round" />
+    <circle cx="64" cy="58" r="5" fill="#ff2bd6" />
+  </g>
+  <g>
     <path d="M32 44h64v44H32zM46 24h36v22H46zM46 72h36" fill="none" stroke="url(#cyanPink)" stroke-width="7" stroke-linejoin="round" />
     <circle cx="64" cy="58" r="5" fill="#ff2bd6" />
   </g>
