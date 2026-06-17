@@ -32,7 +32,7 @@ html {
 
 body {
 	margin: 0;
-	font-family: var(--font-sans);
+	font-family: var(--font-mono);
 	color: var(--text);
 	background:
 		radial-gradient(
