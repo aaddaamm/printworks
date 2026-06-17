@@ -36,6 +36,15 @@
           "value": "public, max-age=86400"
         }
       ]
+    },
+    {
+      "source": "/og-image-v2.jpg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
     }
   ]
 }
