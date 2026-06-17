@@ -1,0 +1,21 @@
+{
+  "name": "Robinson Printworks",
+  "short_name": "Printworks",
+  "description": "Custom 3D printing for prototypes, parts, models, gifts, and small-batch projects.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

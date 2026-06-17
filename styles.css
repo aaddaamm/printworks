@@ -76,10 +76,16 @@ a {
 }
 
 .logo {
-	font-weight: 800;
-	letter-spacing: -0.03em;
-	font-size: 1.15rem;
-	text-shadow: 0 0 18px rgba(217, 70, 239, 0.7);
+	display: inline-flex;
+	align-items: center;
+	line-height: 0;
+}
+
+.logo img {
+	display: block;
+	width: 210px;
+	height: auto;
+	filter: drop-shadow(0 0 18px rgba(217, 70, 239, 0.32));
 }
 
 .nav-links {
@@ -406,6 +412,10 @@ h3 {
 
 	.nav-links {
 		display: none;
+	}
+
+	.logo img {
+		width: 180px;
 	}
 
 	.section {
