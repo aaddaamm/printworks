@@ -8,6 +8,8 @@
       name="description"
       content="Custom 3D printing for prototypes, replacement parts, models, gifts, and small-batch projects. Request a quote for your next print."
     />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#020617" />
     <link rel="canonical" href="https://prints.adamrobinson.tech/" />
 
     <meta property="og:type" content="website" />
@@ -68,6 +70,90 @@
         };
     </script>
     <script defer src="/_vercel/speed-insights/script.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://prints.adamrobinson.tech/#website",
+            "name": "Robinson Printworks",
+            "url": "https://prints.adamrobinson.tech/",
+            "description": "Custom 3D printing for prototypes, replacement parts, models, gifts, and small-batch projects."
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://prints.adamrobinson.tech/#business",
+            "name": "Robinson Printworks",
+            "url": "https://prints.adamrobinson.tech/",
+            "image": "https://prints.adamrobinson.tech/og-image.png",
+            "email": "adam@adamrobinson.tech",
+            "description": "Custom 3D printing for prototypes, replacement parts, tabletop models, gifts, and small-batch projects.",
+            "areaServed": {
+              "@type": "State",
+              "name": "Rhode Island"
+            },
+            "makesOffer": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Custom 3D printing",
+                  "serviceType": "3D printing service"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Prototype and replacement part printing",
+                  "serviceType": "Prototype printing"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://prints.adamrobinson.tech/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What file types do you accept for 3D printing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Robinson Printworks can review STL, 3MF, OBJ, sketches, reference images, or links to existing models."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What materials can you print?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Common materials include PLA, PETG, and TPU, with ABS or ASA available by request depending on the project."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does a custom 3D print cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pricing depends on model size, material, print time, quantity, and cleanup needs. Send the project details to request a quote."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you help if I only have an idea?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Share the idea, rough dimensions, photos, or a sketch and Robinson Printworks can review whether it is printable."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -87,8 +173,9 @@
           <p class="eyebrow">Custom 3D printing</p>
           <h1>Bring your ideas, parts, and prototypes to life.</h1>
           <p class="hero-copy">
-            Affordable 3D printing for functional parts, tabletop models, gifts,
-            prototypes, repairs, and small production runs.
+            Affordable 3D printing in Rhode Island for functional parts,
+            tabletop models, gifts, prototypes, repairs, and small production
+            runs.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#quote">Request a quote</a>
@@ -180,6 +267,61 @@
           <span>ABS / ASA by request</span>
           <span>Multiple colors</span>
           <span>Basic cleanup</span>
+        </div>
+      </section>
+
+      <section class="section trust">
+        <div class="section-heading">
+          <p class="eyebrow">Good fit for</p>
+          <h2>Small practical prints with clear use cases.</h2>
+          <p>
+            Robinson Printworks is best for one-off parts, early prototypes,
+            local projects, and small batches where a clear quote matters more
+            than a full production run.
+          </p>
+        </div>
+        <ul class="trust-list">
+          <li>Prototype parts and fit checks</li>
+          <li>Household replacement pieces</li>
+          <li>Organizer trays, mounts, clips, and brackets</li>
+          <li>Tabletop accessories, gifts, and display pieces</li>
+        </ul>
+      </section>
+
+      <section class="section faq" aria-labelledby="faq-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Questions</p>
+          <h2 id="faq-heading">3D printing quote basics.</h2>
+        </div>
+        <div class="faq-grid">
+          <article class="card">
+            <h3>What file types do you accept?</h3>
+            <p>
+              STL, 3MF, and OBJ files are ideal. I can also review sketches,
+              reference photos, measurements, or links to existing models.
+            </p>
+          </article>
+          <article class="card">
+            <h3>What materials can you print?</h3>
+            <p>
+              PLA, PETG, and TPU are the common options. ABS or ASA may be
+              available by request depending on the part and use case.
+            </p>
+          </article>
+          <article class="card">
+            <h3>How much does a print cost?</h3>
+            <p>
+              Price depends on model size, material, print time, quantity, and
+              cleanup needs. Send the details and I’ll reply with a clear quote.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Can you help if I only have an idea?</h3>
+            <p>
+              Yes. Share the idea, rough dimensions, photos, or a sketch and I
+              can help determine whether it is a good fit for 3D printing.
+            </p>
+          </article>
         </div>
       </section>
 
