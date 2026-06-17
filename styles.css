@@ -427,8 +427,31 @@ h3 {
 	gap: 12px;
 }
 
-.trust {
+.logistics,
+.trust,
+.projects {
 	padding-top: 32px;
+}
+
+.logistics-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+}
+
+.project-tag {
+	display: inline-flex;
+	width: fit-content;
+	margin-bottom: 14px;
+	border: 1px solid var(--neon-line);
+	border-radius: 999px;
+	padding: 5px 10px;
+	color: var(--neon-green);
+	background: rgba(2, 6, 23, 0.32);
+	font-size: 0.72rem;
+	font-weight: 800;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
 }
 
 .trust-list {
@@ -519,6 +542,7 @@ h3 {
 	}
 
 	.cards,
+	.logistics-grid,
 	.trust-list,
 	.faq-grid {
 		grid-template-columns: repeat(2, 1fr);
@@ -544,6 +568,7 @@ h3 {
 	}
 
 	.cards,
+	.logistics-grid,
 	.trust-list,
 	.faq-grid {
 		grid-template-columns: 1fr;
