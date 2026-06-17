@@ -38,7 +38,7 @@
       ]
     },
     {
-      "source": "/og-image-v2.jpg",
+      "source": "/og-image.jpg",
       "headers": [
         {
           "key": "Cache-Control",
