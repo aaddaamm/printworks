@@ -181,18 +181,21 @@ h3 {
 }
 
 .button {
+	position: relative;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 48px;
 	padding: 0 20px;
+	overflow: hidden;
 	border-radius: 999px;
 	font-weight: 800;
 	border: 1px solid transparent;
 	transition:
 		transform 160ms ease,
 		border-color 160ms ease,
-		background 160ms ease;
+		box-shadow 160ms ease,
+		background-position 260ms ease;
 }
 
 .button:hover,
@@ -200,8 +203,36 @@ h3 {
 	transform: translateY(-2px);
 }
 
+.button::before {
+	content: "";
+	position: absolute;
+	inset: -35% auto -35% -70%;
+	width: 52%;
+	transform: skewX(-18deg);
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.48),
+		transparent
+	);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.button:hover::before,
+.button:focus-visible::before {
+	animation: button-shine 720ms ease;
+}
+
 .button.primary {
-	background: linear-gradient(135deg, var(--accent), var(--neon-hot));
+	background: linear-gradient(
+		135deg,
+		var(--accent),
+		var(--neon-hot),
+		var(--neon-green),
+		var(--accent)
+	);
+	background-size: 240% 240%;
 	color: #04111f;
 	box-shadow:
 		0 0 22px rgba(56, 189, 248, 0.35),
@@ -210,7 +241,10 @@ h3 {
 
 .button.primary:hover,
 .button.primary:focus-visible {
-	background: #7dd3fc;
+	background-position: 100% 50%;
+	box-shadow:
+		0 0 28px rgba(56, 189, 248, 0.48),
+		0 0 42px rgba(217, 70, 239, 0.34);
 }
 
 .button.secondary {
@@ -221,6 +255,38 @@ h3 {
 
 .button.full {
 	width: 100%;
+}
+
+@keyframes button-shine {
+	0% {
+		left: -70%;
+		opacity: 0;
+	}
+
+	18% {
+		opacity: 1;
+	}
+
+	100% {
+		left: 120%;
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.button {
+		transition: none;
+	}
+
+	.button:hover,
+	.button:focus-visible {
+		transform: none;
+	}
+
+	.button:hover::before,
+	.button:focus-visible::before {
+		animation: none;
+	}
 }
 
 .hero-card,
