@@ -429,13 +429,16 @@ h3 {
 .split,
 .quote {
 	display: grid;
-	grid-template-columns: 0.8fr 1fr;
 	gap: 40px;
 	align-items: start;
 }
 
-.split h2 {
-	font-size: clamp(2rem, 3vw, 2.6rem);
+.split {
+	grid-template-columns: 1fr 1fr;
+}
+
+.quote {
+	grid-template-columns: 0.8fr 1fr;
 }
 
 .steps {
