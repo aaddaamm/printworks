@@ -1,0 +1,10 @@
+# Source photos can be large and may include phone-specific formats.
+# Optimized gallery images live in images/gallery/ and are committed.
+images/*.jpg
+images/*.jpeg
+images/*.png
+images/*.heic
+images/optimized/
+
+!images/gallery/
+!images/gallery/*.jpg
