@@ -76,7 +76,7 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260616-gallery" />
+    <link rel="stylesheet" href="styles.css?v=20260616-lightbox" />
 
     <!-- Vercel Web Analytics -->
     <script>
@@ -423,103 +423,183 @@
         </div>
         <div class="gallery-grid">
           <figure class="gallery-item">
-            <img
-              src="/images/gallery/replacement-vacuum-nozzle.jpg"
-              alt="3D printed replacement vacuum nozzle part"
-              width="1000"
-              height="750"
-              loading="lazy"
-            />
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-gallery-index="0"
+              aria-label="Open photo: Replacement vacuum nozzle"
+            >
+              <img
+                src="/images/gallery/replacement-vacuum-nozzle.jpg"
+                alt="3D printed replacement vacuum nozzle part"
+                width="1000"
+                height="750"
+                loading="lazy"
+              />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
             <figcaption>Replacement vacuum nozzle</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img
-              src="/images/gallery/switch-2-wallmount.jpg"
-              alt="3D printed wall mount for a Nintendo Switch 2"
-              width="750"
-              height="1000"
-              loading="lazy"
-            />
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-gallery-index="1"
+              aria-label="Open photo: Switch 2 wall mount"
+            >
+              <img
+                src="/images/gallery/switch-2-wallmount.jpg"
+                alt="3D printed wall mount for a Nintendo Switch 2"
+                width="750"
+                height="1000"
+                loading="lazy"
+              />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
             <figcaption>Switch 2 wall mount</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img
-              src="/images/gallery/apple-homepod-wallmount.jpg"
-              alt="3D printed wall mount for an Apple HomePod"
-              width="750"
-              height="1000"
-              loading="lazy"
-            />
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-gallery-index="2"
+              aria-label="Open photo: HomePod wall mount"
+            >
+              <img
+                src="/images/gallery/apple-homepod-wallmount.jpg"
+                alt="3D printed wall mount for an Apple HomePod"
+                width="750"
+                height="1000"
+                loading="lazy"
+              />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
             <figcaption>HomePod wall mount</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img
-              src="/images/gallery/lego-cabinet-pulls-workbench.jpg"
-              alt="3D printed LEGO-style cabinet pulls installed on a workbench"
-              width="750"
-              height="1000"
-              loading="lazy"
-            />
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-gallery-index="3"
+              aria-label="Open photo: LEGO-style cabinet pulls"
+            >
+              <img
+                src="/images/gallery/lego-cabinet-pulls-workbench.jpg"
+                alt="3D printed LEGO-style cabinet pulls installed on a workbench"
+                width="750"
+                height="1000"
+                loading="lazy"
+              />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
             <figcaption>LEGO-style cabinet pulls</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img
-              src="/images/gallery/shower-phoneholder.jpg"
-              alt="3D printed shower phone holder mounted on tile"
-              width="1000"
-              height="750"
-              loading="lazy"
-            />
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-gallery-index="4"
+              aria-label="Open photo: Shower phone holder"
+            >
+              <img
+                src="/images/gallery/shower-phoneholder.jpg"
+                alt="3D printed shower phone holder mounted on tile"
+                width="1000"
+                height="750"
+                loading="lazy"
+              />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
             <figcaption>Shower phone holder</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img
-              src="/images/gallery/Gambody-BD-1-lifesized.jpg"
-              alt="Life-sized 3D printed BD-1 droid model"
-              width="1000"
-              height="750"
-              loading="lazy"
-            />
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-gallery-index="5"
+              aria-label="Open photo: Life-sized BD-1 model"
+            >
+              <img
+                src="/images/gallery/Gambody-BD-1-lifesized.jpg"
+                alt="Life-sized 3D printed BD-1 droid model"
+                width="1000"
+                height="750"
+                loading="lazy"
+              />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
             <figcaption>Life-sized BD-1 model</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img
-              src="/images/gallery/figment-figure.jpg"
-              alt="Colorful 3D printed Figment character figure"
-              width="750"
-              height="1000"
-              loading="lazy"
-            />
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-gallery-index="6"
+              aria-label="Open photo: Figment figure"
+            >
+              <img
+                src="/images/gallery/figment-figure.jpg"
+                alt="Colorful 3D printed Figment character figure"
+                width="750"
+                height="1000"
+                loading="lazy"
+              />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
             <figcaption>Figment figure</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img
-              src="/images/gallery/rotating-fidget.jpg"
-              alt="3D printed mini gyro fidget spinner with interlocking rings"
-              width="750"
-              height="1000"
-              loading="lazy"
-            />
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-gallery-index="7"
+              aria-label="Open photo: Mini gyro fidget spinner"
+            >
+              <img
+                src="/images/gallery/rotating-fidget.jpg"
+                alt="3D printed mini gyro fidget spinner with interlocking rings"
+                width="750"
+                height="1000"
+                loading="lazy"
+              />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
             <figcaption>Mini gyro fidget spinner</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img
-              src="/images/gallery/zelda-shadowbox-print.jpg"
-              alt="3D printed Zelda shadowbox display piece"
-              width="750"
-              height="1000"
-              loading="lazy"
-            />
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-gallery-index="8"
+              aria-label="Open photo: Zelda shadowbox"
+            >
+              <img
+                src="/images/gallery/zelda-shadowbox-print.jpg"
+                alt="3D printed Zelda shadowbox display piece"
+                width="750"
+                height="1000"
+                loading="lazy"
+              />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
             <figcaption>Zelda shadowbox</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img
-              src="/images/gallery/snapmaker-bookmark-print-left.jpg"
-              alt="3D printed bookmark with detailed surface texture"
-              width="750"
-              height="1000"
-              loading="lazy"
-            />
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-gallery-index="9"
+              aria-label="Open photo: Detailed bookmark print"
+            >
+              <img
+                src="/images/gallery/snapmaker-bookmark-print-left.jpg"
+                alt="3D printed bookmark with detailed surface texture"
+                width="750"
+                height="1000"
+                loading="lazy"
+              />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
             <figcaption>Detailed bookmark print</figcaption>
           </figure>
         </div>
@@ -595,6 +675,20 @@
       </section>
     </main>
 
+
+
+    <dialog class="gallery-dialog" id="gallery-dialog" aria-labelledby="gallery-dialog-title">
+      <div class="gallery-dialog-frame">
+        <button class="gallery-close" type="button" aria-label="Close gallery">×</button>
+        <button class="gallery-nav gallery-prev" type="button" aria-label="Previous photo">‹</button>
+        <figure class="gallery-dialog-figure">
+          <img id="gallery-dialog-image" src="" alt="" width="1000" height="750" />
+          <figcaption id="gallery-dialog-title"></figcaption>
+        </figure>
+        <button class="gallery-nav gallery-next" type="button" aria-label="Next photo">›</button>
+      </div>
+    </dialog>
+
     <footer class="site-footer">
       <p>
         © <span id="year"></span> Robinson Printworks. Custom 3D printing
@@ -604,6 +698,78 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      const galleryItems = Array.from(document.querySelectorAll(".gallery-trigger")).map(
+        (trigger) => {
+          const image = trigger.querySelector("img");
+          const caption = trigger.parentElement.querySelector("figcaption").textContent;
+
+          return {
+            src: image.currentSrc || image.src,
+            alt: image.alt,
+            width: image.width,
+            height: image.height,
+            caption,
+          };
+        },
+      );
+
+      const galleryDialog = document.getElementById("gallery-dialog");
+      const galleryImage = document.getElementById("gallery-dialog-image");
+      const galleryTitle = document.getElementById("gallery-dialog-title");
+      const closeGallery = galleryDialog.querySelector(".gallery-close");
+      const previousGalleryItem = galleryDialog.querySelector(".gallery-prev");
+      const nextGalleryItem = galleryDialog.querySelector(".gallery-next");
+      let activeGalleryIndex = 0;
+      let lastGalleryTrigger = null;
+
+      function showGalleryItem(index) {
+        activeGalleryIndex = (index + galleryItems.length) % galleryItems.length;
+        const item = galleryItems[activeGalleryIndex];
+
+        galleryImage.src = item.src;
+        galleryImage.alt = item.alt;
+        galleryImage.width = item.width;
+        galleryImage.height = item.height;
+        galleryTitle.textContent = `${item.caption} (${activeGalleryIndex + 1} of ${galleryItems.length})`;
+      }
+
+      function openGallery(index, trigger) {
+        lastGalleryTrigger = trigger;
+        showGalleryItem(index);
+        galleryDialog.showModal();
+        closeGallery.focus();
+      }
+
+      document.querySelectorAll(".gallery-trigger").forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          openGallery(Number(trigger.dataset.galleryIndex), trigger);
+        });
+      });
+
+      closeGallery.addEventListener("click", () => galleryDialog.close());
+      previousGalleryItem.addEventListener("click", () => showGalleryItem(activeGalleryIndex - 1));
+      nextGalleryItem.addEventListener("click", () => showGalleryItem(activeGalleryIndex + 1));
+
+      galleryDialog.addEventListener("click", (event) => {
+        if (event.target === galleryDialog) {
+          galleryDialog.close();
+        }
+      });
+
+      galleryDialog.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") {
+          showGalleryItem(activeGalleryIndex - 1);
+        }
+
+        if (event.key === "ArrowRight") {
+          showGalleryItem(activeGalleryIndex + 1);
+        }
+      });
+
+      galleryDialog.addEventListener("close", () => {
+        lastGalleryTrigger?.focus();
+      });
     </script>
   </body>
 </html>
