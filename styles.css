@@ -438,11 +438,22 @@ h3 {
 }
 
 .split,
-.quote {
+.quote,
+.neighbor-callout {
 	display: grid;
 	grid-template-columns: 0.8fr 1fr;
 	gap: 40px;
 	align-items: start;
+}
+
+.neighbor-callout {
+	padding: 42px;
+	border: 1px solid var(--neon-line);
+	border-radius: var(--radius-panel);
+	background:
+		linear-gradient(135deg, rgba(124, 255, 203, 0.12), rgba(56, 189, 248, 0.08)),
+		var(--surface-card);
+	box-shadow: var(--neon-shadow);
 }
 
 .steps {
@@ -478,12 +489,66 @@ h3 {
 }
 
 .logistics,
-.gallery {
+.gallery,
+.pricing,
+.about-local {
 	padding-top: 32px;
 }
 
-.logistics-grid {
+.logistics-grid,
+.pricing-grid,
+.trust-cards {
 	grid-template-columns: repeat(3, 1fr);
+}
+
+.pricing-grid {
+	display: grid;
+	gap: 16px;
+}
+
+.price-range {
+	margin-bottom: 12px;
+	color: var(--neon-green);
+	font-weight: 800;
+}
+
+.direct-answer {
+	color: var(--muted);
+}
+
+.table-wrap {
+	margin-top: 24px;
+	overflow-x: auto;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid var(--neon-line);
+	border-radius: var(--radius-card);
+	background: var(--surface-card);
+	box-shadow: var(--shadow), var(--neon-shadow);
+}
+
+th,
+td {
+	padding: 14px 16px;
+	border-bottom: 1px solid var(--line);
+	text-align: left;
+	vertical-align: top;
+}
+
+th {
+	color: var(--text);
+	font-weight: 800;
+}
+
+td {
+	color: var(--muted);
+}
+
+tr:last-child td {
+	border-bottom: 0;
 }
 
 .gallery-grid {
@@ -671,11 +736,36 @@ h3 {
 	font-size: 0.92rem;
 }
 
+.disclaimer {
+	padding-top: 14px;
+	border-top: 1px solid var(--line);
+}
+
 .site-footer {
 	border-top: 1px solid var(--line);
 	padding: 28px 16px;
 	text-align: center;
 	color: var(--muted);
+}
+
+.footer-contact {
+	margin: 0 auto 18px;
+	font-style: normal;
+	line-height: 1.7;
+}
+
+.footer-contact .brand-name {
+	color: var(--text);
+}
+
+.footer-contact a {
+	color: var(--accent);
+	font-weight: 800;
+}
+
+.footer-contact a:hover,
+.footer-contact a:focus-visible {
+	color: var(--text);
 }
 
 .site-footer p {
@@ -685,7 +775,8 @@ h3 {
 @media (max-width: 860px) {
 	.hero,
 	.split,
-	.quote {
+	.quote,
+	.neighbor-callout {
 		grid-template-columns: 1fr;
 	}
 
@@ -696,6 +787,8 @@ h3 {
 
 	.cards,
 	.logistics-grid,
+	.pricing-grid,
+	.trust-cards,
 	.gallery-grid,
 	.faq-grid {
 		grid-template-columns: repeat(2, 1fr);
@@ -722,6 +815,8 @@ h3 {
 
 	.cards,
 	.logistics-grid,
+	.pricing-grid,
+	.trust-cards,
 	.gallery-grid,
 	.faq-grid {
 		grid-template-columns: 1fr;
@@ -731,7 +826,8 @@ h3 {
 		min-height: 300px;
 	}
 
-	.quote {
+	.quote,
+	.neighbor-callout {
 		padding: 24px;
 	}
 

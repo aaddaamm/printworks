@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://printworks.adamrobinson.tech/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://printworks.adamrobinson.tech/images/gallery/replacement-vacuum-nozzle.webp</image:loc>
+      <image:caption>3D printed replacement vacuum nozzle part</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://printworks.adamrobinson.tech/images/gallery/switch-2-wallmount.webp</image:loc>
+      <image:caption>3D printed wall mount for a Nintendo Switch 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://printworks.adamrobinson.tech/images/gallery/apple-homepod-wallmount.webp</image:loc>
+      <image:caption>3D printed wall mount for an Apple HomePod</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://printworks.adamrobinson.tech/images/gallery/lego-cabinet-pulls-workbench.webp</image:loc>
+      <image:caption>3D printed LEGO-style cabinet pulls installed on a workbench</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://printworks.adamrobinson.tech/images/gallery/shower-phoneholder.webp</image:loc>
+      <image:caption>3D printed shower phone holder mounted on tile</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://printworks.adamrobinson.tech/images/gallery/Gambody-BD-1-lifesized.webp</image:loc>
+      <image:caption>Life-sized 3D printed BD-1 droid model</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://printworks.adamrobinson.tech/images/gallery/figment-figure.webp</image:loc>
+      <image:caption>Colorful 3D printed Figment character figure</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://printworks.adamrobinson.tech/images/gallery/rotating-fidget.webp</image:loc>
+      <image:caption>3D printed mini gyro fidget spinner with interlocking rings</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://printworks.adamrobinson.tech/images/gallery/zelda-shadowbox-print.webp</image:loc>
+      <image:caption>3D printed Zelda shadowbox display piece</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://printworks.adamrobinson.tech/images/gallery/snapmaker-bookmark-print-left.webp</image:loc>
+      <image:caption>3D printed bookmark with detailed surface texture</image:caption>
+    </image:image>
   </url>
 </urlset>
