@@ -1,4 +1,4 @@
-# Robinson Printworks
+# Robinson PrintWorks
 
 A simple one-page website for a personal 3D printing service.
 
@@ -6,8 +6,8 @@ A simple one-page website for a personal 3D printing service.
 
 Update these placeholders before sharing:
 
-- `Robinson Printworks` in `index.html` if you want a different business name
-- `adam@adamrobinson.tech` in the quote button if you want a different contact email
+- `Robinson PrintWorks` in `index.html` if you want a different business name
+- The quote/footer email `data-user` and `data-domain` attributes in `index.html` if you want a different contact email
 - Service copy, materials, pricing, or turnaround details
 - Add photos of your prints if you have them
 

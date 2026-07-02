@@ -1,12 +1,12 @@
 <!-- markdownlint-disable MD013 -->
 
-# Nextdoor Post Template — Robinson Printworks
+# Nextdoor Post Template — Robinson PrintWorks
 
 Use this when posting to Nextdoor or replying to neighborhood groups. Keep it neighborly, specific, and low-pressure.
 
 ## Recommended post
 
-Hi neighbors — I’m starting **Robinson Printworks**, a small Rhode Island 3D printing service.
+Hi neighbors — I’m starting **Robinson PrintWorks**, a small Rhode Island 3D printing service.
 
 I’m offering **free help figuring out whether something can be 3D printed**. If you have a broken knob, missing clip, bracket, mount, organizer idea, prototype, toy part, or something odd you can’t find online, send me a photo or sketch and I’ll take a look.
 
@@ -18,7 +18,7 @@ What’s one small household part you wish you could replace instead of buying t
 
 ## Short version
 
-Hi neighbors — I’m starting Robinson Printworks, a small local 3D printing service. If you have a broken part, missing clip, bracket, mount, organizer idea, or something odd you can’t find online, send me a photo or sketch and I’ll take a look for free. Examples: <https://printworks.adamrobinson.tech/>
+Hi neighbors — I’m starting Robinson PrintWorks, a small local 3D printing service. If you have a broken part, missing clip, bracket, mount, organizer idea, or something odd you can’t find online, send me a photo or sketch and I’ll take a look for free. Examples: <https://printworks.adamrobinson.tech/>
 
 ## Notes
 

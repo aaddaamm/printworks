@@ -1,12 +1,12 @@
 <!-- markdownlint-disable MD013 MD025 -->
 
-# Instagram Caption Template — Robinson Printworks
+# Instagram Caption Template — Robinson PrintWorks
 
 Use this for Instagram posts or reels. Instagram should be more visual and concise than Nextdoor or Marketplace.
 
 ## Caption option 1 — launch / intro
 
-I’m starting **Robinson Printworks**, a small Rhode Island 3D printing service for useful little fixes, replacement parts, mounts, gifts, prototypes, and odd ideas you can’t easily buy off the shelf.
+I’m starting **Robinson PrintWorks**, a small Rhode Island 3D printing service for useful little fixes, replacement parts, mounts, gifts, prototypes, and odd ideas you can’t easily buy off the shelf.
 
 Not sure if something can be printed? Send me a photo, sketch, or file and I’ll take a look for free.
 
@@ -16,7 +16,7 @@ Examples + contact: <https://printworks.adamrobinson.tech/>
 
 ## Caption option 2 — gallery post
 
-A few recent prints from Robinson Printworks: practical parts, mounts, gifts, and small one-off projects.
+A few recent prints from Robinson PrintWorks: practical parts, mounts, gifts, and small one-off projects.
 
 If you have a broken part, missing clip, bracket, organizer idea, or prototype, send me a photo or sketch. I’ll let you know for free whether 3D printing makes sense.
 
@@ -26,7 +26,7 @@ Rhode Island pickup by arrangement. Link in bio / <https://printworks.adamrobins
 
 Can this be 3D printed? Send me a photo or sketch and I’ll take a look for free.
 
-Robinson Printworks — local 3D printing in Rhode Island for replacement parts, mounts, gifts, prototypes, and useful little fixes.
+Robinson PrintWorks — local 3D printing in Rhode Island for replacement parts, mounts, gifts, prototypes, and useful little fixes.
 
 ## Hashtag set
 
