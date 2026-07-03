@@ -68,7 +68,12 @@ body {
 			rgba(17, 24, 39, 0.36),
 			transparent 24rem
 		),
-		linear-gradient(135deg, var(--brand-midnight) 0%, var(--brand-graphite) 58%, #020617 100%);
+		linear-gradient(
+			135deg,
+			var(--brand-midnight) 0%,
+			var(--brand-graphite) 58%,
+			#020617 100%
+		);
 	line-height: 1.6;
 }
 
@@ -830,6 +835,72 @@ tr:last-child td {
 	.quote,
 	.neighbor-callout {
 		padding: 24px;
+	}
+
+	.table-wrap {
+		overflow-x: visible;
+	}
+
+	table,
+	thead,
+	tbody,
+	tr,
+	th,
+	td {
+		display: block;
+	}
+
+	table {
+		border: 0;
+		background: transparent;
+		box-shadow: none;
+	}
+
+	thead {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+	}
+
+	tr {
+		margin-bottom: 12px;
+		border: 1px solid var(--neon-line);
+		border-radius: 18px;
+		background: var(--surface-card);
+		box-shadow: var(--neon-shadow);
+		overflow: hidden;
+	}
+
+	td {
+		display: grid;
+		grid-template-columns: minmax(7.5rem, 0.42fr) 1fr;
+		gap: 12px;
+		padding: 12px 14px;
+		border-bottom: 1px solid var(--line);
+	}
+
+	td::before {
+		color: var(--accent);
+		content: "";
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	td:nth-child(1)::before {
+		content: "Project";
+	}
+
+	td:nth-child(2)::before {
+		content: "Fit";
+	}
+
+	td:nth-child(3)::before {
+		content: "Send";
 	}
 
 	.gallery-dialog {
