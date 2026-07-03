@@ -1,32 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-labelledby="title desc">
-  <title id="title">Robinson Printworks</title>
-  <desc id="desc">Neon printer mark with Robinson Printworks wordmark.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" role="img" aria-labelledby="title desc">
+  <title id="title">Robinson PrintWorks</title>
+  <desc id="desc">Deep navy and cyan Robinson PrintWorks mark with engineered wordmark.</desc>
   <defs>
-    <linearGradient id="cyanPink" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#38bdf8" />
-      <stop offset="0.52" stop-color="#7cffcb" />
-      <stop offset="1" stop-color="#ff2bd6" />
+    <linearGradient id="markEdge" x1="10" y1="14" x2="86" y2="94" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" />
+      <stop offset="1" stop-color="#0891B2" />
     </linearGradient>
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="1.2" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+    <linearGradient id="wordAccent" x1="284" y1="0" x2="420" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC" />
+      <stop offset="1" stop-color="#22D3EE" />
+    </linearGradient>
   </defs>
-  <rect width="520" height="120" rx="28" fill="#020617" />
-  <g filter="url(#glow)" opacity="0.75">
-    <path d="M32 44h64v44H32zM46 24h36v22H46zM46 72h36" fill="none" stroke="url(#cyanPink)" stroke-width="7" stroke-linejoin="round" />
-    <circle cx="64" cy="58" r="5" fill="#ff2bd6" />
-  </g>
-  <g>
-    <path d="M32 44h64v44H32zM46 24h36v22H46zM46 72h36" fill="none" stroke="url(#cyanPink)" stroke-width="7" stroke-linejoin="round" />
-    <circle cx="64" cy="58" r="5" fill="#ff2bd6" />
-  </g>
+
+  <rect width="560" height="120" rx="28" fill="#061B33" />
+  <path d="M35 24h58l13 13v46L93 96H35L22 83V37l13-13Z" fill="#0B213D" stroke="url(#markEdge)" stroke-width="4" />
+  <path d="M35 24h58l13 13" fill="none" stroke="#F8FAFC" stroke-width="2" opacity="0.32" stroke-linecap="round" />
+  <path d="M44 82V39h20c10.3 0 16.2 5.7 16.2 14.3 0 8.8-6 14.5-16.2 14.5H54.6V82H44Zm10.6-22.5h8.7c4 0 6.3-2.3 6.3-6.1 0-3.6-2.3-5.9-6.3-5.9h-8.7v12Z" fill="#F8FAFC" />
+  <path d="M75 82 66.8 58.5h10.1l4.2 13.3L87 39h8.6L86 82H75Z" fill="#22D3EE" />
+
   <g font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-weight="800">
-    <text x="124" y="55" font-size="34" letter-spacing="-1.4" fill="#7dd3fc">Robinson</text>
-    <text x="124" y="91" font-size="34" letter-spacing="-1.4" fill="#ff7ae6">Printworks</text>
+    <text x="128" y="55" font-size="34" letter-spacing="-1.5" fill="#F8FAFC">Robinson</text>
+    <text x="128" y="91" font-size="34" letter-spacing="-1.5" fill="url(#wordAccent)">PrintWorks</text>
   </g>
-  <path d="M124 102h286" stroke="#7cffcb" stroke-width="2" opacity="0.72" />
+  <path d="M128 101h286" stroke="#22D3EE" stroke-width="2" opacity="0.72" />
 </svg>
