@@ -1,3 +1,7 @@
+node_modules/
+.lens/
+.pi-lens/
+
 # Source photos can be large and may include phone-specific formats.
 # Optimized gallery images live in images/gallery/ and are committed.
 images/*.jpg
