@@ -13,6 +13,7 @@
 - Prototype printing
 - Small-batch prints
 - Gift and model printing
+- Free printability review before quoting
 - Local pickup by arrangement, with small shipped orders by request
 
 ## Materials and Inputs
@@ -20,7 +21,9 @@
 - Project inputs can include STL, 3MF, OBJ, sketches, reference photos, links to existing models, or a rough idea with dimensions.
 
 ## Business Notes
-- Service area: Rhode Island
+- Service area: Rhode Island, especially Providence County and Kent County
 - Business name: Robinson PrintWorks
 - Website: https://printworks.adamrobinson.tech/
+- Operator: Adam Robinson, https://adamrobinson.tech/
 - First printability review: free
+- Robinson PrintWorks will decline unsafe, restricted, or unsuitable projects and will recommend another process when 3D printing is not a good fit.
