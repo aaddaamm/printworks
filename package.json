@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "python3 -m http.server 5173",
     "serve": "python3 -m http.server 5173",
-    "check": "npx --yes html-validate index.html"
+    "check": "npx --yes html-validate index.html",
+    "audit:static": "node scripts/static-audit.mjs"
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.2.8"
