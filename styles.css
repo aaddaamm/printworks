@@ -157,6 +157,7 @@ a:focus-visible,
 	width: min(1120px, calc(100% - 32px));
 	margin: 0 auto;
 	min-height: 72px;
+	padding-block: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -165,13 +166,17 @@ a:focus-visible,
 
 .logo {
 	display: inline-flex;
+	flex: 0 1 280px;
+	min-width: 0;
+	max-width: 100%;
 	align-items: center;
 	line-height: 0;
 }
 
 .logo img {
 	display: block;
-	width: 280px;
+	width: 100%;
+	max-width: 280px;
 	height: auto;
 	filter: drop-shadow(0 10px 22px rgba(34, 211, 238, 0.14));
 }
@@ -872,7 +877,11 @@ tr:last-child td {
 	}
 
 	.logo img {
-		width: 220px;
+		max-width: 220px;
+	}
+
+	.logo {
+		flex-basis: 220px;
 	}
 
 	.section {
