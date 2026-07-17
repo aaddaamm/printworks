@@ -82,7 +82,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css?v=20260716-header-fit" />
+    <link rel="stylesheet" href="styles.css?v=20260717-conversion-pass" />
 
     <!-- Vercel Web Analytics -->
     <script>
@@ -278,7 +278,7 @@
           <a href="#services">Services</a>
           <a href="#process">Process</a>
           <a href="#gallery">Gallery</a>
-          <a href="#quote">Get a Quote</a>
+          <a class="nav-cta" href="#quote">Get a Quote</a>
         </div>
       </nav>
     </header>
@@ -287,17 +287,16 @@
       <section class="hero section">
         <div class="hero-content">
           <p class="eyebrow">Local custom printing</p>
-          <h1>Rhode Island 3D printing for useful little fixes.</h1>
+          <h1>Custom 3D printing in Rhode Island, built for practical use.</h1>
           <p class="hero-copy">
-            I print replacement parts, mounts, organizers, gifts, prototypes,
-            and one-off ideas around Rhode Island. Send a file, photo, or rough
-            sketch.
+            Replacement parts, mounts, organizers, prototypes, gifts, and
+            small batches—made locally from a file, photo, or rough sketch.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#quote"
               >Get free printability help</a
             >
-            <a class="button secondary" href="#services">View services</a>
+            <a class="button secondary" href="#gallery">See recent work</a>
           </div>
         </div>
         <div class="hero-card">
@@ -322,8 +321,8 @@
         aria-labelledby="neighbor-heading"
       >
         <div>
-          <p class="eyebrow">Found me on Nextdoor?</p>
-          <h2 id="neighbor-heading">Send a photo, sketch, or broken part.</h2>
+          <p class="eyebrow">Not sure where to start?</p>
+          <h2 id="neighbor-heading">Start with a photo, sketch, or broken part.</h2>
         </div>
         <div>
           <p>
@@ -363,6 +362,27 @@
             <p>A few copies of the same useful thing.</p>
           </article>
         </div>
+        <div class="service-details">
+          <div>
+            <h3>Materials &amp; finishing</h3>
+            <ul class="pill-list">
+              <li>PLA</li>
+              <li>PETG</li>
+              <li>TPU</li>
+              <li>ABS / ASA by request</li>
+              <li>Multiple colors</li>
+              <li>Basic cleanup</li>
+            </ul>
+          </div>
+          <div class="pickup-note">
+            <h3>Pickup &amp; shipping</h3>
+            <p>
+              Local pickup is available around Providence, Warwick, Cranston,
+              and nearby Rhode Island communities. Small orders can ship by
+              request.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section id="process" class="section split">
@@ -391,21 +411,6 @@
             ><span>Once approved, I print, inspect, and package it.</span>
           </li>
         </ol>
-      </section>
-
-      <section class="section materials">
-        <div class="section-heading">
-          <p class="eyebrow">Materials</p>
-          <h2>Materials I usually use.</h2>
-        </div>
-        <ul class="pill-list">
-          <li>PLA</li>
-          <li>PETG</li>
-          <li>TPU</li>
-          <li>ABS / ASA by request</li>
-          <li>Multiple colors</li>
-          <li>Basic cleanup</li>
-        </ul>
       </section>
 
       <section class="section pricing" aria-labelledby="pricing-heading">
@@ -479,33 +484,6 @@
               </tr>
             </tbody>
           </table>
-        </div>
-      </section>
-
-      <section class="section logistics">
-        <div class="section-heading">
-          <p class="eyebrow">Local service</p>
-          <h2>Get a quote, then arrange local pickup.</h2>
-          <p>
-            Local pickup is available for Providence, Warwick, Cranston, and
-            nearby Rhode Island requests.
-          </p>
-        </div>
-        <div class="logistics-grid">
-          <article class="card">
-            <h3>Local pickup</h3>
-            <p>Available after the print is finished and checked.</p>
-          </article>
-          <article class="card">
-            <h3>Shipping by request</h3>
-            <p>
-              Small shipped orders are available when pickup is not convenient.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Start with a photo or sketch.</h3>
-            <p>Send a sketch, photo, dimensions, or rough idea.</p>
-          </article>
         </div>
       </section>
 
@@ -627,78 +605,6 @@
               <span class="gallery-open-label" aria-hidden="true">View</span>
             </button>
             <figcaption>Life-sized BD-1 model</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              data-gallery-index="6"
-              aria-label="Open photo: Figment figure"
-            >
-              <img
-                src="/images/gallery/figment-figure.webp"
-                alt="Colorful 3D printed Figment character figure"
-                width="750"
-                height="1000"
-                loading="lazy"
-              />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>Figment figure</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              data-gallery-index="7"
-              aria-label="Open photo: Mini gyro fidget spinner"
-            >
-              <img
-                src="/images/gallery/rotating-fidget.webp"
-                alt="3D printed mini gyro fidget spinner with interlocking rings"
-                width="750"
-                height="1000"
-                loading="lazy"
-              />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>Mini gyro fidget spinner</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              data-gallery-index="8"
-              aria-label="Open photo: Zelda shadowbox"
-            >
-              <img
-                src="/images/gallery/zelda-shadowbox-print.webp"
-                alt="3D printed Zelda shadowbox display piece"
-                width="750"
-                height="1000"
-                loading="lazy"
-              />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>Zelda shadowbox</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              data-gallery-index="9"
-              aria-label="Open photo: Detailed bookmark print"
-            >
-              <img
-                src="/images/gallery/snapmaker-bookmark-print-left.webp"
-                alt="3D printed bookmark with detailed surface texture"
-                width="750"
-                height="1000"
-                loading="lazy"
-              />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>Detailed bookmark print</figcaption>
           </figure>
         </div>
       </section>
