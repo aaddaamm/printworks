@@ -46,4 +46,10 @@
       <image:caption>3D printed bookmark with detailed surface texture</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://printworks.adamrobinson.tech/quote/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
