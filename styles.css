@@ -186,6 +186,7 @@ a:focus-visible,
 
 .nav-links {
 	display: flex;
+	align-items: center;
 	gap: 18px;
 	color: var(--muted);
 	font-family: var(--font-mono);
