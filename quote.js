@@ -1,16 +1,22 @@
 (() => {
 	const form = document.getElementById("quote-form");
 	const error = document.getElementById("form-error");
+	const success = document.getElementById("form-success");
+	const submitButton = form.querySelector("button[type='submit']");
+	const defaultButtonText = submitButton.textContent.trim();
 	const trackedFields = form.querySelectorAll("input, select, textarea");
 	let formStarted = false;
 
 	const track = (name, data = {}) => {
 		try {
 			window.va("event", { name, data });
-		} catch {
+		} catch (error) {
+			window.logger.warn("analytics_event_failed", { event: name, error });
 			// Analytics should never interrupt the quote flow.
 		}
 	};
+
+	window.logger.info("page_ready", { route: "/quote" });
 
 	const campaign = new URLSearchParams(window.location.search);
 	const campaignDetails = [
@@ -46,7 +52,7 @@
 		});
 	});
 
-	form.addEventListener("submit", (event) => {
+	form.addEventListener("submit", async (event) => {
 		event.preventDefault();
 
 		const requiredFields = Array.from(form.querySelectorAll("[required]"));
@@ -61,38 +67,73 @@
 			error.hidden = false;
 			invalidFields[0].focus();
 			track("quote_form_error", { route: "/quote", reason: "missing_required" });
+			window.logger.info("quote_validation_failed", {
+				missing_field_count: invalidFields.length,
+			});
 			return;
 		}
 
 		error.hidden = true;
+		success.hidden = true;
 		const data = new FormData(form);
-		const subject = `3D Printing Quote — ${data.get("projectType")}`;
-		const lines = [
-			"Hi Adam,",
-			"",
-			"I'd like a quote for this project:",
-			"",
-			`Name: ${data.get("name")}`,
-			`Reply to: ${data.get("contact")}`,
-			`Project type: ${data.get("projectType")}`,
-			`Quantity: ${data.get("quantity") || "Not specified"}`,
-			`Needed by: ${data.get("neededBy") || "Flexible"}`,
-			"",
-			"Project details:",
-			data.get("details"),
-			"",
-			"I will attach any photos or files to this email.",
-		];
+		const requestId =
+			form.dataset.requestId ||
+			(globalThis.crypto?.randomUUID?.() ??
+				`${Date.now()}-${Math.random().toString(36).slice(2)}`);
+		form.dataset.requestId = requestId;
 
-		if (campaignDetails.length > 0) {
-			lines.push("", "Campaign reference:", ...campaignDetails);
-		}
-
-		track("quote_email_intent", {
+		track("quote_form_submit", {
 			route: "/quote",
 			project_type: data.get("projectType"),
 		});
 
-		window.location.href = `mailto:adam@adamrobinson.tech?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+		submitButton.disabled = true;
+		submitButton.textContent = "Sending…";
+
+		try {
+			const response = await fetch("/api/quote", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({
+					requestId,
+					name: data.get("name"),
+					contact: data.get("contact"),
+					projectType: data.get("projectType"),
+					details: data.get("details"),
+					quantity: data.get("quantity"),
+					neededBy: data.get("neededBy"),
+					companyWebsite: data.get("companyWebsite"),
+					campaign: campaignDetails,
+				}),
+			});
+
+			if (!response.ok) throw new Error(`Quote API returned ${response.status}`);
+
+			window.logger.info("quote_email_accepted", {
+				request_id: requestId,
+				project_type: data.get("projectType"),
+			});
+			track("quote_form_success", { route: "/quote" });
+			form.reset();
+			delete form.dataset.requestId;
+			formStarted = false;
+			success.textContent =
+				"Your request is on its way. I’ll review it and follow up with you soon.";
+			success.hidden = false;
+			success.focus();
+		} catch (submissionError) {
+			window.logger.error("quote_email_failed", {
+				request_id: requestId,
+				error: submissionError,
+			});
+			track("quote_form_error", { route: "/quote", reason: "send_failed" });
+			error.textContent =
+				"I couldn’t send your request. Please try again, or call (508) 828-0090.";
+			error.hidden = false;
+			error.focus();
+		} finally {
+			submitButton.disabled = false;
+			submitButton.textContent = defaultButtonText;
+		}
 	});
 })();

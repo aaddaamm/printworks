@@ -221,10 +221,34 @@
 	font-weight: 700;
 }
 
+.form-success {
+	margin-bottom: 14px;
+	padding: 10px 12px;
+	border: 1px solid rgba(34, 211, 238, 0.38);
+	border-radius: 12px;
+	background: rgba(8, 145, 178, 0.16);
+	color: var(--brand-white);
+	font-size: 0.82rem;
+	font-weight: 700;
+}
+
+.form-honeypot {
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
 .quote-submit {
 	min-height: 54px;
 	cursor: pointer;
 	font-size: 0.92rem;
+}
+
+.quote-submit:disabled {
+	cursor: wait;
+	opacity: 0.72;
 }
 
 .form-note {

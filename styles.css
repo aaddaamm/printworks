@@ -597,6 +597,7 @@ h3 {
 }
 
 .gallery,
+.timelapses,
 .pricing,
 .about-local {
 	padding-top: 32px;
@@ -734,6 +735,50 @@ tr:last-child td {
 	color: var(--muted);
 	font-size: 0.9rem;
 	font-weight: 700;
+}
+
+.timelapse-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px;
+}
+
+.timelapse-card {
+	margin: 0;
+	overflow: hidden;
+	border: 1px solid var(--neon-line);
+	border-radius: var(--radius-card);
+	background: var(--surface-card);
+	box-shadow: var(--shadow), var(--neon-shadow);
+}
+
+.timelapse-card video {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	border-bottom: 1px solid var(--line);
+	background: #020617;
+	object-fit: cover;
+}
+
+.timelapse-card figcaption {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 16px 18px 18px;
+}
+
+.timelapse-card figcaption strong {
+	font-family: var(--font-mono);
+	color: var(--text);
+}
+
+.timelapse-card figcaption span {
+	color: var(--muted);
+	font-size: 0.78rem;
+	text-align: right;
 }
 
 .gallery-dialog {
@@ -959,6 +1004,14 @@ tr:last-child td {
 	.gallery-item figcaption {
 		padding: 10px 11px 12px;
 		font-size: 0.78rem;
+	}
+
+	.timelapse-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.timelapse-card figcaption {
+		padding: 13px 14px 15px;
 	}
 
 	.hero-card {
