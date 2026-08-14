@@ -500,6 +500,10 @@ h3 {
 	grid-template-columns: repeat(5, 1fr);
 }
 
+.service-cards {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .card {
 	border-radius: var(--radius-card);
 	padding: 24px;
