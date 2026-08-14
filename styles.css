@@ -48,9 +48,9 @@
 	--brand-white: #f8fafc;
 	--brand-cool-gray: #94a3b8;
 	--brand-graphite: #111827;
-	--bg: var(--brand-midnight);
-	--panel: #0b213d;
-	--panel-strong: #102844;
+	--bg: var(--brand-royal);
+	--panel: #0a2a52;
+	--panel-strong: #0b315f;
 	--text: var(--brand-white);
 	--muted: #c8d4e8;
 	--accent: var(--brand-cyan);
@@ -104,9 +104,9 @@ body {
 		),
 		linear-gradient(
 			135deg,
-			var(--brand-midnight) 0%,
-			var(--brand-graphite) 58%,
-			#020617 100%
+			var(--brand-royal) 0%,
+			var(--brand-midnight) 58%,
+			var(--brand-graphite) 100%
 		);
 	line-height: 1.6;
 }
