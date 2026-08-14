@@ -210,6 +210,24 @@
 	font-size: 0.75rem;
 }
 
+.site-visit-field {
+	margin-top: -2px;
+}
+
+.checkbox-label {
+	display: flex !important;
+	align-items: flex-start;
+	gap: 10px;
+	cursor: pointer;
+}
+
+.checkbox-label input {
+	width: 18px;
+	min-height: 18px;
+	margin: 2px 0 0;
+	accent-color: var(--accent);
+}
+
 .form-error {
 	margin-bottom: 14px;
 	padding: 10px 12px;

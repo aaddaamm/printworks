@@ -1,14 +1,5 @@
 import { Resend } from "resend";
 
-const projectTypes = new Set([
-	"Replacement part",
-	"Prototype or custom design",
-	"Print from an existing 3D file",
-	"Small batch or business order",
-	"Gift, model, or display piece",
-	"Not sure yet",
-]);
-
 const text = (value, maximum) =>
 	typeof value === "string" ? value.trim().slice(0, maximum) : "";
 
@@ -48,12 +39,8 @@ export async function POST(request) {
 	}
 
 	const requestId = text(body.requestId, 100);
-	const name = text(body.name, 100);
 	const contact = text(body.contact, 160);
-	const projectType = text(body.projectType, 100);
 	const details = text(body.details, 1500);
-	const quantity = text(body.quantity, 10);
-	const neededBy = text(body.neededBy, 10);
 	const campaign = Array.isArray(body.campaign)
 		? body.campaign.slice(0, 5).map((item) => text(item, 140)).filter(Boolean)
 		: [];
@@ -63,17 +50,9 @@ export async function POST(request) {
 		return json({ ok: true });
 	}
 
-	if (
-		!requestId ||
-		!name ||
-		!contact ||
-		!details ||
-		!projectTypes.has(projectType) ||
-		(quantity && (!/^\d+$/.test(quantity) || Number(quantity) < 1)) ||
-		(neededBy && !/^\d{4}-\d{2}-\d{2}$/.test(neededBy))
-	) {
+	if (!requestId || !contact || !details) {
 		log("warn", "request_rejected", { request_id: requestId, reason: "validation" });
-		return json({ error: "Please check the quote details and try again." }, 400);
+		return json({ error: "Please add your contact details and a short note, then try again." }, 400);
 	}
 
 	const { RESEND_API_KEY, QUOTE_FROM_EMAIL, QUOTE_TO_EMAIL } = process.env;
@@ -87,15 +66,11 @@ export async function POST(request) {
 	}
 
 	const lines = [
-		"New quote request from Robinson PrintWorks",
+		"New project inquiry from Robinson PrintWorks",
 		"",
-		`Name: ${name}`,
 		`Reply to: ${contact}`,
-		`Project type: ${projectType}`,
-		`Quantity: ${quantity || "Not specified"}`,
-		`Needed by: ${neededBy || "Flexible"}`,
 		"",
-		"Project details:",
+		"What they need help with:",
 		details,
 	];
 
@@ -112,7 +87,7 @@ export async function POST(request) {
 				from: QUOTE_FROM_EMAIL,
 				to: [QUOTE_TO_EMAIL || "adam@adamrobinson.tech"],
 				replyTo,
-				subject: `3D Printing Quote — ${projectType}`,
+				subject: "3D Printing Inquiry",
 				text: lines.join("\n"),
 			},
 			{ idempotencyKey: `quote/${requestId}` },

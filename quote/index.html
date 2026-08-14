@@ -103,11 +103,10 @@
     <main id="main-content" class="quote-main">
       <section class="quote-intro" aria-labelledby="quote-heading">
         <p class="eyebrow">Free project review · Rhode Island</p>
-        <h1 id="quote-heading">Tell me what you need printed.</h1>
+        <h1 id="quote-heading">Have a part, problem, or idea?</h1>
         <p class="quote-lede">
-          Share the idea, part, or problem. I’ll review it personally and send
-          a clear price, material recommendation, and timing before anything is
-          printed.
+          Tell me what you are trying to make, replace, or fix. I’ll review it
+          personally and let you know whether 3D printing is a good fit.
         </p>
 
         <ul class="quote-benefits" aria-label="What to expect">
@@ -121,7 +120,7 @@
           </li>
           <li>
             <span aria-hidden="true">03</span>
-            <div><strong>Local and practical</strong><small>Rhode Island pickup, with shipping by request.</small></div>
+            <div><strong>Local and practical</strong><small>Rhode Island pickup, shipping by request, and site visits for fit-sensitive projects.</small></div>
           </li>
         </ul>
 
@@ -139,9 +138,9 @@
 
       <section class="campaign-form-card" aria-labelledby="form-heading">
         <div class="form-heading">
-          <p class="eyebrow">Start your quote</p>
-          <h2 id="form-heading">A few quick details.</h2>
-          <p>No perfect file needed. A description, sketch, or photo is enough to start.</p>
+          <p class="eyebrow">Start a conversation</p>
+          <h2 id="form-heading">Tell me a little about it.</h2>
+          <p>You do not need a model or technical know-how. A plain description is enough to start.</p>
         </div>
 
         <form id="quote-form" novalidate>
@@ -155,66 +154,29 @@
               autocomplete="off"
             />
           </div>
-          <div class="field-row">
-            <div class="field">
-              <label for="name">Name</label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                autocomplete="name"
-                maxlength="100"
-                required
-              />
-            </div>
-            <div class="field">
-              <label for="contact">Email or phone</label>
-              <input
-                id="contact"
-                name="contact"
-                type="text"
-                maxlength="160"
-                required
-                aria-describedby="contact-hint"
-              />
-              <small id="contact-hint">Whichever is easiest for a reply.</small>
-            </div>
-          </div>
-
           <div class="field">
-            <label for="project-type">What kind of project is it?</label>
-            <select id="project-type" name="projectType" required>
-              <option value="">Choose one</option>
-              <option>Replacement part</option>
-              <option>Prototype or custom design</option>
-              <option>Print from an existing 3D file</option>
-              <option>Small batch or business order</option>
-              <option>Gift, model, or display piece</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="details">What do you need?</label>
+            <label for="details">What are you trying to make, replace, or fix?</label>
             <textarea
               id="details"
               name="details"
               rows="5"
               maxlength="1500"
               required
-              placeholder="Describe the part, rough size, quantity, and what it needs to do."
+              placeholder="For example: “The plastic clip on my vacuum broke and I need a replacement.”"
             ></textarea>
           </div>
 
-          <div class="field-row compact-fields">
-            <div class="field">
-              <label for="quantity">Quantity <span>(optional)</span></label>
-              <input id="quantity" name="quantity" type="number" min="1" inputmode="numeric" />
-            </div>
-            <div class="field">
-              <label for="needed-by">Needed by <span>(optional)</span></label>
-              <input id="needed-by" name="neededBy" type="date" />
-            </div>
+          <div class="field">
+            <label for="contact">Email or phone</label>
+            <input
+              id="contact"
+              name="contact"
+              type="text"
+              maxlength="160"
+              required
+              aria-describedby="contact-hint"
+            />
+            <small id="contact-hint">Whichever is easiest for a reply.</small>
           </div>
 
           <div
@@ -233,14 +195,14 @@
           ></div>
 
           <button class="button primary full quote-submit" type="submit">
-            Send my quote request
+            Get free printability advice
           </button>
           <p class="form-note">
-            Your request is sent securely. I’ll reply so you can share any photos,
-            sketches, STL, 3MF, or OBJ files.
+            I’ll reply so you can share a photo, measurements, or anything else
+            that helps. A finished 3D file is not expected.
           </p>
           <p class="form-note privacy-note">
-            Your details are used only to review and respond to your quote request.
+            Your details are used only to review and respond to your inquiry.
           </p>
         </form>
       </section>

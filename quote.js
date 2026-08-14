@@ -84,7 +84,6 @@
 
 		track("quote_form_submit", {
 			route: "/quote",
-			project_type: data.get("projectType"),
 		});
 
 		submitButton.disabled = true;
@@ -96,12 +95,8 @@
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
 					requestId,
-					name: data.get("name"),
 					contact: data.get("contact"),
-					projectType: data.get("projectType"),
 					details: data.get("details"),
-					quantity: data.get("quantity"),
-					neededBy: data.get("neededBy"),
 					companyWebsite: data.get("companyWebsite"),
 					campaign: campaignDetails,
 				}),
@@ -111,14 +106,13 @@
 
 			window.logger.info("quote_email_accepted", {
 				request_id: requestId,
-				project_type: data.get("projectType"),
 			});
 			track("quote_form_success", { route: "/quote" });
 			form.reset();
 			delete form.dataset.requestId;
 			formStarted = false;
 			success.textContent =
-				"Your request is on its way. I’ll review it and follow up with you soon.";
+				"Your note is on its way. I’ll review it and follow up with you soon.";
 			success.hidden = false;
 			success.focus();
 		} catch (submissionError) {

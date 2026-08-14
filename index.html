@@ -183,7 +183,8 @@
               "Custom 3D printing",
               "Replacement part printing",
               "Prototype printing",
-              "Small-batch 3D printing"
+              "Small-batch 3D printing",
+              "On-site measurement and fit review"
             ],
             "makesOffer": [
               {
@@ -200,6 +201,14 @@
                   "@type": "Service",
                   "name": "Prototype and replacement part printing",
                   "serviceType": "Prototype printing"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "On-site measurement and fit review",
+                  "serviceType": "Custom 3D printing consultation"
                 }
               }
             ]
@@ -242,6 +251,14 @@
               },
               {
                 "@type": "Question",
+                "name": "Do you offer site visits for custom 3D printed parts?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For Rhode Island projects that need in-person measurements or a fit check, Robinson PrintWorks can discuss an on-site visit. Visits are quoted before scheduling."
+                }
+              },
+              {
+                "@type": "Question",
                 "name": "Do you offer pickup or shipping?",
                 "acceptedAnswer": {
                   "@type": "Answer",
@@ -279,7 +296,7 @@
           <a href="#services">Services</a>
           <a href="#process">Process</a>
           <a href="#gallery">Gallery</a>
-          <a class="nav-cta" href="/quote">Get a Quote</a>
+          <a class="nav-cta" href="/quote">Tell Me Your Idea</a>
         </div>
       </nav>
     </header>
@@ -288,14 +305,15 @@
       <section class="hero section">
         <div class="hero-content">
           <p class="eyebrow">Local custom printing</p>
-          <h1>Custom 3D printing in Rhode Island, built for practical use.</h1>
+          <h1>Need something made, replaced, or fixed?</h1>
           <p class="hero-copy">
-            Replacement parts, mounts, organizers, prototypes, gifts, and
-            small batches—made locally from a file, photo, or rough sketch.
+            I make custom 3D-printed parts, prototypes, gifts, organizers,
+            mounts, and more—locally, from a photo, a broken part, a sketch, or
+            simply an idea.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="/quote"
-              >Get free printability help</a
+              >Tell me what you need</a
             >
             <a class="button secondary" href="#gallery">See recent work</a>
           </div>
@@ -323,13 +341,13 @@
       >
         <div>
           <p class="eyebrow">Not sure where to start?</p>
-          <h2 id="neighbor-heading">Start with a photo, sketch, or broken part.</h2>
+          <h2 id="neighbor-heading">You do not need a file to get started.</h2>
         </div>
         <div>
           <p>
-            Have a broken clip, odd bracket, missing knob, or organizer idea?
-            Send a photo or sketch. I’ll tell you if it looks printable before
-            you spend anything.
+            Have a broken clip, odd bracket, missing knob, or a problem you wish
+            had a better solution? Start with whatever you have. I’ll tell you
+            whether 3D printing can help before you spend anything.
           </p>
           <p class="small-note">
             Simple test pieces may be free or at-cost while I build more local
@@ -341,7 +359,7 @@
       <section id="services" class="section">
         <div class="section-heading">
           <p class="eyebrow">What I print</p>
-          <h2>What I can print.</h2>
+          <h2>Almost anything you can imagine—within the limits of 3D printing.</h2>
         </div>
         <div class="cards">
           <article class="card">
@@ -359,8 +377,16 @@
             <p>Decor, tabletop pieces, small gifts, and display parts.</p>
           </article>
           <article class="card">
+            <h3>Ideas that need a solution</h3>
+            <p>Tell me what you need the part to do, and we’ll figure out whether it can be made.</p>
+          </article>
+          <article class="card">
             <h3>Small batches</h3>
             <p>A few copies of the same useful thing.</p>
+          </article>
+          <article class="card">
+            <h3>On-site fit checks</h3>
+            <p>For Rhode Island projects where measurements or fit need a look in person.</p>
           </article>
         </div>
         <div class="service-details">
@@ -383,25 +409,33 @@
               request.
             </p>
           </div>
+          <div class="pickup-note">
+            <h3>Site visits</h3>
+            <p>
+              For custom parts that need a closer look, I can discuss an
+              on-site measurement and fit review. Visits are quoted before
+              scheduling.
+            </p>
+          </div>
         </div>
       </section>
 
       <section id="process" class="section split">
         <div>
           <p class="eyebrow">How it works</p>
-          <h2>How a quote works.</h2>
+          <h2>How it works.</h2>
           <p>
-            Send what you have. I’ll check printability, material, timing, and
-            price before making anything.
+            Start with the problem. I’ll check whether it is printable, then we
+            can work out material, timing, and price.
           </p>
         </div>
         <ol class="steps">
           <li>
-            <strong>Share your idea</strong
-            ><span>Send an STL, 3MF, OBJ, sketch, photo, or reference.</span>
+            <strong>Tell me what you need</strong
+            ><span>Describe the problem, or send a photo, broken part, sketch, or reference. Files are welcome but never expected. If a part needs an in-person fit check, request a site visit.</span>
           </li>
           <li>
-            <strong>Get a quote</strong
+            <strong>Get clear next steps</strong
             ><span
               >I’ll confirm material, timing, pickup or shipping, and
               cost.</span
@@ -796,9 +830,9 @@
         </div>
         <div class="faq-grid">
           <article class="card">
-            <h3>What file types do you accept?</h3>
+            <h3>Do I need a 3D file?</h3>
             <p>
-              STL, 3MF, and OBJ are ideal. Sketches and photos are fine too.
+              No. A photo, broken part, sketch, rough measurement, or simple description is plenty. STL, 3MF, and OBJ files are welcome if you have them.
             </p>
           </article>
           <article class="card">
@@ -867,32 +901,23 @@
 
       <section id="quote" class="section quote">
         <div>
-          <p class="eyebrow">Request a quote</p>
-          <h2>Send a photo for free advice.</h2>
+          <p class="eyebrow">Start a conversation</p>
+          <h2>Tell me what you need made, replaced, or fixed.</h2>
           <p>
-            Send the part, photo, sketch, or file. Include rough size, quantity,
-            color/material if you care, and when you need it.
+            Start with a plain description, photo, broken part, sketch, or file.
+            I’ll tell you whether it is a good fit for 3D printing and what we
+            need to do next.
           </p>
         </div>
         <div class="quote-card">
           <a
-            class="button primary full js-email-link"
-            href="#quote"
-            data-user="adam"
-            data-domain="adamrobinson.tech"
-            data-subject="3D Printing Quote Request"
+            class="button primary full"
+            href="/quote"
           >
-            Send a photo or idea
+            Tell me what you need
           </a>
           <p class="small-note">
-            Email
-            <strong
-              class="js-email-text"
-              data-user="adam"
-              data-domain="adamrobinson.tech"
-              >Adam</strong
-            >
-            with whatever you have. The first look is free.
+            No technical details required. The first look is free.
           </p>
           <p class="small-note disclaimer" data-nosnippet>
             I’ll flag heat, load, food-contact, outdoor, or safety concerns
