@@ -12,7 +12,7 @@ Not sure if something can be printed? Send me a photo, sketch, or file and I’l
 
 Local pickup by arrangement. Small simple prints are often $10–$25, and larger jobs get a clear quote first.
 
-Examples + contact: <https://printworks.adamrobinson.tech/>
+Examples + contact: <https://robinsonprintworks.com/>
 
 ## Caption option 2 — gallery post
 
@@ -20,7 +20,7 @@ A few recent prints from Robinson PrintWorks: practical parts, mounts, gifts, an
 
 If you have a broken part, missing clip, bracket, organizer idea, or prototype, send me a photo or sketch. I’ll let you know for free whether 3D printing makes sense.
 
-Rhode Island pickup by arrangement. Link in bio / <https://printworks.adamrobinson.tech/>
+Rhode Island pickup by arrangement. Link in bio / <https://robinsonprintworks.com/>
 
 ## Caption option 3 — short reel caption
 

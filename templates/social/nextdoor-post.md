@@ -12,13 +12,13 @@ I’m offering **free help figuring out whether something can be 3D printed**. I
 
 If it’s simple, I may be able to print a small test piece for free or at-cost while I build up local examples. Larger jobs get a clear quote first.
 
-Examples here: <https://printworks.adamrobinson.tech/>
+Examples here: <https://robinsonprintworks.com/>
 
 What’s one small household part you wish you could replace instead of buying the whole thing again?
 
 ## Short version
 
-Hi neighbors — I’m starting Robinson PrintWorks, a small local 3D printing service. If you have a broken part, missing clip, bracket, mount, organizer idea, or something odd you can’t find online, send me a photo or sketch and I’ll take a look for free. Examples: <https://printworks.adamrobinson.tech/>
+Hi neighbors — I’m starting Robinson PrintWorks, a small local 3D printing service. If you have a broken part, missing clip, bracket, mount, organizer idea, or something odd you can’t find online, send me a photo or sketch and I’ll take a look for free. Examples: <https://robinsonprintworks.com/>
 
 ## Notes
 

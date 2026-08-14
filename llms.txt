@@ -3,9 +3,9 @@
 > Robinson PrintWorks is a Rhode Island service-area 3D printing business run by Adam Robinson. It helps local customers turn photos, sketches, replacement parts, prototypes, tabletop models, gifts, and small-batch ideas into practical 3D prints.
 
 ## Main Pages
-- [Homepage](https://printworks.adamrobinson.tech/) — Services, process, gallery examples, quote request instructions, and frequently asked questions.
-- [Gallery](https://printworks.adamrobinson.tech/#gallery) — Examples of replacement parts, mounts, models, gifts, fidgets, and functional prints.
-- [Quote request](https://printworks.adamrobinson.tech/#quote) — Instructions for sending a photo, sketch, dimensions, material preference, quantity, and timing for free printability advice.
+- [Homepage](https://robinsonprintworks.com/) — Services, process, gallery examples, quote request instructions, and frequently asked questions.
+- [Gallery](https://robinsonprintworks.com/#gallery) — Examples of replacement parts, mounts, models, gifts, fidgets, and functional prints.
+- [Quote request](https://robinsonprintworks.com/quote) — Instructions for sending a photo, sketch, dimensions, material preference, quantity, and timing for free printability advice.
 
 ## Services
 - Custom 3D printing in Rhode Island
@@ -23,7 +23,7 @@
 ## Business Notes
 - Service area: Rhode Island, especially Providence County and Kent County
 - Business name: Robinson PrintWorks
-- Website: https://printworks.adamrobinson.tech/
+- Website: https://robinsonprintworks.com/
 - Operator: Adam Robinson, https://adamrobinson.tech/
 - First printability review: free
 - Robinson PrintWorks will decline unsafe, restricted, or unsuitable projects and will recommend another process when 3D printing is not a good fit.

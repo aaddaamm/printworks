@@ -26,7 +26,7 @@ Local pickup by arrangement. Shipping available for small items by request.
 
 Send a photo, rough size, quantity, preferred color/material, and when you need it.
 
-Examples: <https://printworks.adamrobinson.tech/>
+Examples: <https://robinsonprintworks.com/>
 
 ## Optional shorter description
 

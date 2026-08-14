@@ -29,7 +29,7 @@ locally requires `vercel dev` and local values based on `.env.example`.
 Recommended domain:
 
 ```text
-printworks.adamrobinson.tech
+robinsonprintworks.com
 ```
 
 This site is static HTML/CSS and can be imported directly into Vercel.
@@ -53,6 +53,6 @@ optionally `QUOTE_TO_EMAIL` in Vercel using `.env.example` as a reference.
 
 The send endpoint logs an `email_accepted` or failure event without logging the
 customer's personal information. To record final delivery events, create a Resend
-webhook for `https://printworks.adamrobinson.tech/api/resend-webhook`, subscribe
+webhook for `https://robinsonprintworks.com/api/resend-webhook`, subscribe
 it to sent, delivered, delayed, failed, bounced, complained, and suppressed
 events, then add its signing secret as `RESEND_WEBHOOK_SECRET` in Vercel.

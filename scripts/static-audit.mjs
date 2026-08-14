@@ -28,6 +28,9 @@ for (const file of requiredFiles) {
 }
 
 const html = existsSync("index.html") ? read("index.html") : "";
+const quoteHtml = existsSync("quote/index.html")
+	? read("quote/index.html")
+	: "";
 const css = existsSync("styles.css") ? read("styles.css") : "";
 const robots = existsSync("robots.txt") ? read("robots.txt") : "";
 const sitemap = existsSync("sitemap.xml") ? read("sitemap.xml") : "";
@@ -104,7 +107,7 @@ const canonical =
 	html.match(
 		/<link\s+[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/i,
 	)?.[1] ?? "";
-if (!canonical.startsWith("https://printworks.adamrobinson.tech/")) {
+if (!canonical.startsWith("https://robinsonprintworks.com/")) {
 	fail(`Canonical URL must use production origin; found "${canonical}".`);
 }
 
@@ -206,14 +209,12 @@ if (/transition-all|transition:\s*all/i.test(css)) {
 }
 
 if (
-	!/Sitemap:\s*https:\/\/printworks\.adamrobinson\.tech\/sitemap\.xml/i.test(
-		robots,
-	)
+	!/Sitemap:\s*https:\/\/robinsonprintworks\.com\/sitemap\.xml/i.test(robots)
 ) {
 	fail("robots.txt must reference the production sitemap URL.");
 }
 
-if (!/<loc>https:\/\/printworks\.adamrobinson\.tech\/<\/loc>/i.test(sitemap)) {
+if (!/<loc>https:\/\/robinsonprintworks\.com\/<\/loc>/i.test(sitemap)) {
 	fail("sitemap.xml must include the production homepage URL.");
 }
 
@@ -223,6 +224,57 @@ if (!/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/i.test(sitemap)) {
 
 if (countMatches(sitemap, /<image:loc>/g) < 1) {
 	warn("sitemap.xml has no image sitemap entries.");
+}
+
+const quoteUrl = "https://robinsonprintworks.com/quote";
+for (const [label, pattern] of [
+	[
+		"Quote canonical URL",
+		new RegExp(
+			`<link\\s+[^>]*rel=["']canonical["'][^>]*href=["']${quoteUrl}["']`,
+			"i",
+		),
+	],
+	[
+		"Quote Open Graph URL",
+		new RegExp(
+			`<meta\\s+[^>]*property=["']og:url["'][^>]*content=["']${quoteUrl}["']`,
+			"i",
+		),
+	],
+	["Quote Service schema URL", new RegExp(`"url"\\s*:\\s*"${quoteUrl}"`, "i")],
+	[
+		"Quote Open Graph image alt",
+		/<meta\s+[^>]*property=["']og:image:alt["'][^>]*>/i,
+	],
+	[
+		"Quote Twitter image alt",
+		/<meta\s+[^>]*name=["']twitter:image:alt["'][^>]*>/i,
+	],
+]) {
+	if (!pattern.test(quoteHtml)) {
+		fail(`Missing or incorrect ${label}.`);
+	}
+}
+
+if (!new RegExp(`<loc>${quoteUrl}</loc>`, "i").test(sitemap)) {
+	fail("sitemap.xml must include the non-redirecting quote URL.");
+}
+
+const pageImages = new Set(
+	[
+		...html.matchAll(
+			/<img\b[^>]*\bsrc=["']([^"']*\/images\/gallery\/[^"']+)["']/gi,
+		),
+	].map((match) => `https://robinsonprintworks.com${match[1]}`),
+);
+const sitemapImages = new Set(
+	[...sitemap.matchAll(/<image:loc>([^<]+)<\/image:loc>/gi)].map(
+		(match) => match[1],
+	),
+);
+for (const imageUrl of pageImages.symmetricDifference(sitemapImages)) {
+	fail(`Image sitemap must match gallery image URLs; mismatch: ${imageUrl}`);
 }
 
 for (const message of warnings) {
