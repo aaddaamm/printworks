@@ -6,11 +6,11 @@ family.
 
 ## Parts
 
-| Part | Quantity | Filament | Purpose |
-| --- | ---: | --- | --- |
-| Base | 1 | Deep Royal Blue | Weighted desktop tray and clip receiver |
-| Clip | 3 | Bright Cyan | Removable cable guides |
-| Inlay | 1 | Bright Cyan | Front precision-detail insert |
+| Part  | Quantity | Filament        | Purpose                                 |
+| ----- | -------: | --------------- | --------------------------------------- |
+| Base  |        1 | Deep Royal Blue | Weighted desktop tray and clip receiver |
+| Clip  |        3 | Bright Cyan     | Removable cable guides                  |
+| Inlay |        1 | Bright Cyan     | Front precision-detail insert           |
 
 The OpenSCAD source uses the following export choices:
 

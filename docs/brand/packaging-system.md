@@ -10,18 +10,18 @@
 
 ## Components
 
-| Item | Format | Brand treatment |
-| --- | --- | --- |
-| Product box | Matte navy, graphite, or kraft with navy label | Small mark, product name, cyan rule line, material/process note |
-| Shipping label | White or light gray label | Clean typography, small mark, no decorative clutter |
-| Thank-you card | A6 or 4x6 | Navy front, cyan detail, concise message, support URL |
-| Instruction card | A6 or 4x6 | Step hierarchy, QR code, care notes, contact path |
-| Warranty card | A6 or 4x6 | Plain language, order/date field, support expectations |
-| QR insert | Business-card size | Product page, care instructions, reorder/custom request link |
-| Sticker | Die-cut mark or wordmark | One-color, reversed, and navy/cyan variants |
-| Filament sample card | Small card with sample clip | Material, color, nozzle/temp notes, finish notes |
-| Packaging tape | Navy mark repeat or cyan line | Use sparingly; avoid loud patterning |
-| Small parts bag | Clear or frosted sleeve | Navy/cyan label, part name, orientation/care note |
+| Item                 | Format                                         | Brand treatment                                                 |
+| -------------------- | ---------------------------------------------- | --------------------------------------------------------------- |
+| Product box          | Matte navy, graphite, or kraft with navy label | Small mark, product name, cyan rule line, material/process note |
+| Shipping label       | White or light gray label                      | Clean typography, small mark, no decorative clutter             |
+| Thank-you card       | A6 or 4x6                                      | Navy front, cyan detail, concise message, support URL           |
+| Instruction card     | A6 or 4x6                                      | Step hierarchy, QR code, care notes, contact path               |
+| Warranty card        | A6 or 4x6                                      | Plain language, order/date field, support expectations          |
+| QR insert            | Business-card size                             | Product page, care instructions, reorder/custom request link    |
+| Sticker              | Die-cut mark or wordmark                       | One-color, reversed, and navy/cyan variants                     |
+| Filament sample card | Small card with sample clip                    | Material, color, nozzle/temp notes, finish notes                |
+| Packaging tape       | Navy mark repeat or cyan line                  | Use sparingly; avoid loud patterning                            |
+| Small parts bag      | Clear or frosted sleeve                        | Navy/cyan label, part name, orientation/care note               |
 
 ## Copy Tone
 

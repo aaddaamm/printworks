@@ -4,13 +4,20 @@
   "private": true,
   "description": "Static one-page website for Robinson PrintWorks.",
   "scripts": {
-    "dev": "python3 -m http.server 5173",
+    "build": "node scripts/build-site.mjs",
+    "build:check": "node scripts/build-site.mjs --check",
+    "dev": "npm run build && python3 -m http.server 5173",
     "serve": "python3 -m http.server 5173",
-    "check": "npx --yes html-validate index.html",
-    "audit:static": "node scripts/static-audit.mjs"
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run build:check && npx --yes html-validate index.html",
+    "audit:static": "npm run build:check && node scripts/static-audit.mjs"
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.2.8",
     "resend": "^6.17.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.2"
   }
 }

@@ -11,12 +11,28 @@ Update these placeholders before sharing:
 - Service copy, materials, pricing, or turnaround details
 - Add photos of your prints if you have them
 
+## Homepage components
+
+The homepage is assembled at build time from small HTML components under
+`site/components/`. Edit the matching section there instead of editing the
+generated `index.html` directly.
+
+- `site/components/home/` contains each homepage section.
+- `site/components/site-header.html`, `site-footer.html`, and
+  `gallery-dialog.html` hold shared page chrome.
+- `site/components/document-head.html` contains metadata and structured data.
+- `site/index.template.html` defines the document order.
+
+Run `npm run build` after editing a component. It regenerates the complete,
+search-engine-friendly `index.html` that Vercel serves. `npm run build:check`
+verifies that the generated file is current.
+
 ## Preview locally
 
-Open `index.html` in a browser, or run a small local server:
+Build the homepage, then run a small local server:
 
 ```bash
-python3 -m http.server 5173
+npm run dev
 ```
 
 Then visit `http://localhost:5173`.

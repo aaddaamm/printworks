@@ -1,0 +1,93 @@
+<script>
+  window.logger.info("page_ready", { route: "/" });
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.querySelectorAll(".js-email-link").forEach((link) => {
+    const address = `${link.dataset.user}@${link.dataset.domain}`;
+    const subject = link.dataset.subject
+      ? `?subject=${encodeURIComponent(link.dataset.subject)}`
+      : "";
+    link.href = `mailto:${address}${subject}`;
+  });
+
+  document.querySelectorAll(".js-email-text").forEach((node) => {
+    node.textContent = `${node.dataset.user}@${node.dataset.domain}`;
+  });
+
+  const galleryItems = Array.from(
+    document.querySelectorAll(".gallery-trigger"),
+  ).map((trigger) => {
+    const image = trigger.querySelector("img");
+    const caption =
+      trigger.parentElement.querySelector("figcaption").textContent;
+
+    return {
+      src: image.currentSrc || image.src,
+      alt: image.alt,
+      width: image.width,
+      height: image.height,
+      caption,
+    };
+  });
+
+  const galleryDialog = document.getElementById("gallery-dialog");
+  const galleryImage = document.getElementById("gallery-dialog-image");
+  const galleryTitle = document.getElementById("gallery-dialog-title");
+  const closeGallery = galleryDialog.querySelector(".gallery-close");
+  const previousGalleryItem = galleryDialog.querySelector(".gallery-prev");
+  const nextGalleryItem = galleryDialog.querySelector(".gallery-next");
+  let activeGalleryIndex = 0;
+  let lastGalleryTrigger = null;
+
+  function showGalleryItem(index) {
+    activeGalleryIndex = (index + galleryItems.length) % galleryItems.length;
+    const item = galleryItems[activeGalleryIndex];
+
+    galleryImage.src = item.src;
+    galleryImage.alt = item.alt;
+    galleryImage.width = item.width;
+    galleryImage.height = item.height;
+    galleryTitle.textContent = `${item.caption} (${activeGalleryIndex + 1} of ${galleryItems.length})`;
+  }
+
+  function openGallery(index, trigger) {
+    lastGalleryTrigger = trigger;
+    showGalleryItem(index);
+    galleryDialog.showModal();
+    closeGallery.focus();
+  }
+
+  document.querySelectorAll(".gallery-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      openGallery(Number(trigger.dataset.galleryIndex), trigger);
+    });
+  });
+
+  closeGallery.addEventListener("click", () => galleryDialog.close());
+  previousGalleryItem.addEventListener("click", () =>
+    showGalleryItem(activeGalleryIndex - 1),
+  );
+  nextGalleryItem.addEventListener("click", () =>
+    showGalleryItem(activeGalleryIndex + 1),
+  );
+
+  galleryDialog.addEventListener("click", (event) => {
+    if (event.target === galleryDialog) {
+      galleryDialog.close();
+    }
+  });
+
+  galleryDialog.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      showGalleryItem(activeGalleryIndex - 1);
+    }
+
+    if (event.key === "ArrowRight") {
+      showGalleryItem(activeGalleryIndex + 1);
+    }
+  });
+
+  galleryDialog.addEventListener("close", () => {
+    lastGalleryTrigger?.focus();
+  });
+</script>

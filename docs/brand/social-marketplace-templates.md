@@ -11,18 +11,18 @@
 
 ## Templates
 
-| Template | Format | Required elements |
-| --- | --- | --- |
-| Instagram product launch | 1:1 square | Hero product, short title, cyan detail, small mark |
-| Instagram process | 4:5 vertical | Before/after or macro detail, concise caption area |
-| Facebook post | 1.91:1 or square | Product image, title, local CTA |
-| YouTube thumbnail | 16:9 | High-contrast product hero, 3-5 word title |
-| MakerWorld listing | Marketplace hero | Product isolated on dark studio background, no clutter |
-| Printables listing | Marketplace hero | Product and use-case view, clean crop |
-| Sale graphic | Square and story | Offer, product, restrained accent |
-| STL release | Square | Render, file/type label, version/date |
-| Local service proof | 4:5 vertical | Problem, printed solution, material/process note |
-| Customer handoff | 1:1 square | Finished item, packaging detail, short utility-focused caption |
+| Template                 | Format           | Required elements                                              |
+| ------------------------ | ---------------- | -------------------------------------------------------------- |
+| Instagram product launch | 1:1 square       | Hero product, short title, cyan detail, small mark             |
+| Instagram process        | 4:5 vertical     | Before/after or macro detail, concise caption area             |
+| Facebook post            | 1.91:1 or square | Product image, title, local CTA                                |
+| YouTube thumbnail        | 16:9             | High-contrast product hero, 3-5 word title                     |
+| MakerWorld listing       | Marketplace hero | Product isolated on dark studio background, no clutter         |
+| Printables listing       | Marketplace hero | Product and use-case view, clean crop                          |
+| Sale graphic             | Square and story | Offer, product, restrained accent                              |
+| STL release              | Square           | Render, file/type label, version/date                          |
+| Local service proof      | 4:5 vertical     | Problem, printed solution, material/process note               |
+| Customer handoff         | 1:1 square       | Finished item, packaging detail, short utility-focused caption |
 
 ## Reusable Copy Patterns
 
