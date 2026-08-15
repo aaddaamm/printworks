@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://robinsonprintworks.com/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -30,12 +30,16 @@
       <image:caption>Life-sized 3D printed BD-1 droid model</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://robinsonprintworks.com/images/gallery/monster-cable-holders-portrait.webp</image:loc>
-      <image:caption>Four colorful 3D printed monster cable holders</image:caption>
+      <image:loc>https://robinsonprintworks.com/images/gallery/monster-cable-holders-family.webp</image:loc>
+      <image:caption>Four colorful 3D printed monster cable holders arranged as a product family</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://robinsonprintworks.com/images/gallery/skull-controller-stand.webp</image:loc>
-      <image:caption>Purple 3D printed skull stand holding a black game controller</image:caption>
+      <image:loc>https://robinsonprintworks.com/images/gallery/monster-cable-holders-detail.webp</image:loc>
+      <image:caption>Close-up of a blue 3D printed monster cable holder showing its layered detail</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://robinsonprintworks.com/images/gallery/monster-cable-holders-in-use.webp</image:loc>
+      <image:caption>Green 3D printed monster cable holder organizing a charging cable</image:caption>
     </image:image>
   </url>
   <url>
