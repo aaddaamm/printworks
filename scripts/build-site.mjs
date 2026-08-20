@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve, relative } from "node:path";
-import { format } from "prettier";
+import { format, resolveConfig } from "prettier";
 
 const workspace = process.cwd();
 const sourceRoot = resolve(workspace, "site");
@@ -29,7 +29,9 @@ function render(file, ancestry = []) {
   );
 }
 
+const prettierConfig = (await resolveConfig(output)) ?? {};
 const rendered = await format(`${render(template).trim()}\n`, {
+  ...prettierConfig,
   filepath: output,
 });
 const current = readFileSync(output, "utf8");
