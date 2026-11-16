@@ -218,7 +218,6 @@ h3[id] {
 }
 
 .hero {
-  min-height: calc(100vh - 72px);
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.7fr);
   align-items: center;
@@ -296,6 +295,10 @@ h3 {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 34px;
+}
+
+.hero-jump-links {
+  display: none;
 }
 
 .button {
@@ -447,7 +450,18 @@ h3 {
     var(--panel);
 }
 
+.hero-example {
+  margin: 0;
+}
+
+.hero-example figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .hero-card-image {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
@@ -705,7 +719,9 @@ tr:last-child td {
 .gallery-trigger img {
   display: block;
   width: 100%;
+  aspect-ratio: 4 / 5;
   height: auto;
+  object-fit: contain;
   background: var(--surface-card);
 }
 
@@ -943,7 +959,6 @@ tr:last-child td {
   }
 
   .hero {
-    min-height: auto;
     padding-top: 72px;
   }
 
@@ -953,6 +968,14 @@ tr:last-child td {
   .gallery-grid,
   .faq-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-details > :first-child {
+    grid-column: 1 / -1;
   }
 }
 
@@ -971,12 +994,29 @@ tr:last-child td {
     display: none;
   }
 
+  .hero-jump-links {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    margin-top: 16px;
+    font-size: 0.85rem;
+  }
+
+  .hero-jump-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
   .nav-cta {
     display: inline-flex;
     min-height: 42px;
     align-items: center;
     padding-inline: 14px;
     background: var(--brand-royal);
+    white-space: nowrap;
   }
 
   .logo img {
@@ -1075,7 +1115,7 @@ tr:last-child td {
 
   td {
     display: grid;
-    grid-template-columns: minmax(7.5rem, 0.42fr) 1fr;
+    grid-template-columns: minmax(4.25rem, max-content) minmax(0, 1fr);
     gap: 12px;
     padding: 12px 14px;
     border-bottom: 1px solid var(--line);
@@ -1136,5 +1176,12 @@ tr:last-child td {
   .gallery-next {
     grid-column: 2;
     grid-row: 2;
+  }
+}
+
+@media (hover: none) {
+  .gallery-open-label {
+    opacity: 1;
+    transform: none;
   }
 }

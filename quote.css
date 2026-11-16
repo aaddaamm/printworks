@@ -37,12 +37,21 @@
   padding: clamp(52px, 7vw, 92px) 0;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(420px, 0.72fr);
-  gap: clamp(40px, 7vw, 88px);
+  grid-template-areas:
+    "intro form"
+    "support form";
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(40px, 7vw, 88px);
   align-items: start;
 }
 
 .quote-intro {
+  grid-area: intro;
   padding-top: 20px;
+}
+
+.quote-support {
+  grid-area: support;
 }
 
 .quote-intro h1 {
@@ -127,6 +136,7 @@
 }
 
 .campaign-form-card {
+  grid-area: form;
   padding: clamp(24px, 4vw, 36px);
   border: 1px solid var(--neon-line);
   border-radius: var(--radius-panel);
@@ -305,12 +315,21 @@
 
 @media (max-width: 900px) {
   .quote-main {
-    grid-template-columns: 1fr;
-    gap: 48px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "intro"
+      "form"
+      "support";
+    grid-template-rows: auto;
+    gap: 28px;
   }
 
   .quote-intro {
     padding-top: 0;
+  }
+
+  .quote-lede {
+    margin-bottom: 0;
   }
 }
 
@@ -323,6 +342,7 @@
 
   .quote-header {
     min-height: 72px;
+    gap: 12px;
   }
 
   .quote-header .logo {
@@ -335,6 +355,7 @@
 
   .quote-phone {
     font-size: 0.78rem;
+    white-space: nowrap;
   }
 
   .quote-main {
@@ -342,7 +363,7 @@
   }
 
   .quote-intro h1 {
-    font-size: clamp(2.35rem, 13vw, 3.5rem);
+    font-size: clamp(2.35rem, 10vw, 3.5rem);
   }
 
   .field-row {

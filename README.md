@@ -2,34 +2,23 @@
 
 A simple one-page website for a personal 3D printing service.
 
-## Customize
+## Page templates
 
-Update these placeholders before sharing:
-
-- `Robinson PrintWorks` in `index.html` if you want a different business name
-- The quote/footer email `data-user` and `data-domain` attributes in `index.html` if you want a different contact email
-- Service copy, materials, pricing, or turnaround details
-- Add photos of your prints if you have them
-
-## Homepage components
-
-The homepage is assembled at build time from small HTML components under
-`site/components/`. Edit the matching section there instead of editing the
-generated `index.html` directly.
+Edit the source under `site/` for changes to the homepage and quote page.
 
 - `site/components/home/` contains each homepage section.
-- `site/components/site-header.html`, `site-footer.html`, and
-  `gallery-dialog.html` hold shared page chrome.
-- `site/components/document-head.html` contains metadata and structured data.
-- `site/index.template.html` defines the document order.
+- `site/index.template.html` defines the homepage layout.
+- `site/quote.template.html` holds the quote page and form.
+- `site/components/head-assets.html` and `browser-scripts.html` hold the
+  shared icon links, font preload, browser logger, and analytics setup.
 
-Run `npm run build` after editing a component. It regenerates the complete,
-search-engine-friendly `index.html` that Vercel serves. `npm run build:check`
-verifies that the generated file is current.
+Run `npm run build` after editing a template or component. Commit the generated
+`index.html` and `quote/index.html` when they change. `npm run build:check`
+verifies both files are current.
 
 ## Preview locally
 
-Build the homepage, then run a small local server:
+Build the pages and start a local server:
 
 ```bash
 npm run dev
