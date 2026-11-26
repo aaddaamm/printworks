@@ -2,6 +2,10 @@
   min-height: 100vh;
 }
 
+.quote-page-header {
+  position: static;
+}
+
 .quote-header {
   width: min(1180px, calc(100% - 40px));
   min-height: 88px;
@@ -10,7 +14,6 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  border-bottom: 1px solid var(--line);
 }
 
 .quote-header .logo {
@@ -26,7 +29,7 @@
 }
 
 .quote-phone {
-  color: var(--brand-white);
+  color: var(--text);
   font-family: var(--font-mono);
   font-weight: 800;
 }
@@ -88,7 +91,7 @@
   height: 42px;
   border: 1px solid var(--neon-line);
   border-radius: 14px;
-  background: rgba(7, 59, 120, 0.3);
+  background: var(--surface-pill);
   color: var(--accent);
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -129,7 +132,7 @@
   padding: 7px 11px;
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
-  background: rgba(17, 24, 39, 0.34);
+  background: var(--surface-pill);
   color: var(--muted);
   font-size: 0.78rem;
   font-weight: 700;
@@ -170,13 +173,13 @@
 .field label {
   display: block;
   margin-bottom: 7px;
-  color: var(--brand-white);
+  color: var(--text);
   font-size: 0.86rem;
   font-weight: 800;
 }
 
 .field label span {
-  color: var(--brand-cool-gray);
+  color: var(--muted);
   font-weight: 400;
 }
 
@@ -188,8 +191,8 @@
   padding: 12px 14px;
   border: 1px solid rgba(148, 163, 184, 0.3);
   border-radius: 14px;
-  background: rgba(2, 6, 23, 0.62);
-  color: var(--brand-white);
+  background: var(--panel);
+  color: var(--text);
   font: inherit;
   transition:
     border-color 160ms ease,
@@ -212,13 +215,13 @@
 .field input[aria-invalid="true"],
 .field select[aria-invalid="true"],
 .field textarea[aria-invalid="true"] {
-  border-color: #fca5a5;
+  border-color: #b42318;
 }
 
 .field small {
   display: block;
   margin-top: 6px;
-  color: var(--brand-cool-gray);
+  color: var(--muted);
   font-size: 0.75rem;
 }
 
@@ -245,8 +248,8 @@
   padding: 10px 12px;
   border: 1px solid rgba(252, 165, 165, 0.45);
   border-radius: 12px;
-  background: rgba(127, 29, 29, 0.22);
-  color: #fecaca;
+  background: #fef3f2;
+  color: #912018;
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -257,7 +260,7 @@
   border: 1px solid rgba(34, 211, 238, 0.38);
   border-radius: 12px;
   background: rgba(8, 145, 178, 0.16);
-  color: var(--brand-white);
+  color: var(--text);
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -289,7 +292,7 @@
 }
 
 .privacy-note {
-  color: var(--brand-cool-gray);
+  color: var(--muted);
 }
 
 .quote-footer {
@@ -300,7 +303,7 @@
   justify-content: space-between;
   gap: 16px;
   border-top: 1px solid var(--line);
-  color: var(--brand-cool-gray);
+  color: var(--muted);
   font-size: 0.8rem;
 }
 

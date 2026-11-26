@@ -10,7 +10,7 @@
     <meta
       name="robots"
       content="index, follow, max-snippet:160, max-image-preview:large" />
-    <meta name="theme-color" content="#073B78" />
+    <meta name="theme-color" content="#061B33" />
     <link rel="canonical" href="https://robinsonprintworks.com/" />
     <link rel="author" href="https://adamrobinson.tech/" />
     <meta name="author" content="Adam Robinson" />
@@ -66,7 +66,7 @@
       as="font"
       type="font/woff2"
       crossorigin />
-    <link rel="stylesheet" href="styles.css?v=20261115-visual-audit" />
+    <link rel="stylesheet" href="styles.css?v=20261126-workshop-photo" />
     <script src="/logger.js?v=20260719"></script>
 
     <!-- Vercel Web Analytics -->
@@ -268,7 +268,7 @@
       }
     </script>
   </head>
-  <body id="top">
+  <body id="top" class="home-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
@@ -281,51 +281,240 @@
             fetchpriority="high" />
         </a>
         <div class="nav-links">
+          <a href="#gallery">Gallery</a>
           <a href="#services">Services</a>
           <a href="#process">Process</a>
-          <a href="#gallery">Gallery</a>
-          <a class="nav-cta" href="/quote">Tell Me Your Idea</a>
+          <a href="#pricing-heading">Pricing</a>
         </div>
+        <a class="nav-cta" href="/quote">Get a quote</a>
       </nav>
     </header>
 
     <main id="main-content">
-      <section class="hero section">
-        <div class="hero-content">
-          <p class="eyebrow">Local custom printing</p>
-          <h1>Need something made, replaced, or fixed?</h1>
-          <p class="hero-copy">
-            I make custom 3D-printed parts, prototypes, gifts, organizers,
-            mounts, and more—locally, from a photo, a broken part, a sketch, or
-            simply an idea.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="/quote">Tell me what you need</a>
-            <a class="button secondary" href="#gallery">See recent work</a>
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-stage">
+          <div class="hero-content">
+            <p class="eyebrow">Rhode Island 3D printing</p>
+            <h1 id="hero-heading">
+              Everyday fixes,
+              <br />
+              custom printed.
+            </h1>
+            <p class="hero-copy">
+              I make replacement parts, mounts, and prototypes. Show me the
+              problem. A photo, sketch, or rough idea is enough to start.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="/quote">Tell me your idea</a>
+              <a class="hero-work-link" href="#gallery">See recent work</a>
+            </div>
           </div>
-          <nav class="hero-jump-links" aria-label="Explore the site">
-            <a href="#services">Services</a>
-            <a href="#pricing-heading">Pricing</a>
-            <a href="#gallery">Gallery</a>
-          </nav>
-        </div>
-        <div class="hero-card">
-          <figure class="hero-example">
+          <figure class="hero-visual">
             <img
-              class="hero-card-image"
-              src="/images/gallery/replacement-vacuum-nozzle.webp"
-              alt="Purple replacement nozzle clipped onto a vacuum hose"
-              width="1086"
-              height="1448"
-              decoding="async" />
-            <figcaption>Custom 3D-printed vacuum nozzle</figcaption>
+              src="/images/home/vacuum-nozzle-fit.webp"
+              alt="Purple 3D-printed nozzle clipped to a vacuum between two lengths of hose"
+              width="1100"
+              height="859"
+              fetchpriority="high" />
+            <figcaption>
+              Replacement nozzle fitted to the original vacuum.
+            </figcaption>
           </figure>
-          <ul class="hero-card-list">
-            <li>Local pickup available</li>
-            <li>PLA, PETG, TPU, and more</li>
-            <li>Ideas and photos are welcome</li>
-          </ul>
         </div>
+        <ul class="hero-facts" aria-label="Project and delivery options">
+          <li>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M20.5 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-3.6-.8L3 21l1.7-5.2a8.5 8.5 0 1 1 15.8-4.3Z" />
+              <path d="m8.8 11.7 2.1 2.1 4.4-4.5" />
+            </svg>
+            Free project review
+          </li>
+          <li>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M19 10c0 5.2-7 11.2-7 11.2S5 15.2 5 10a7 7 0 1 1 14 0Z" />
+              <circle cx="12" cy="10" r="2.3" />
+            </svg>
+            Rhode Island pickup
+          </li>
+          <li>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="m12 2.8 8.2 4.5v9.4L12 21.2l-8.2-4.5V7.3L12 2.8Z" />
+              <path d="m3.8 7.3 8.2 4.5 8.2-4.5M12 11.8v9.4M7.9 5.1l8.2 4.5" />
+            </svg>
+            Shipping by request
+          </li>
+        </ul>
+      </section>
+
+      <section
+        id="gallery"
+        class="section gallery"
+        aria-labelledby="gallery-heading">
+        <div class="gallery-heading">
+          <h2 id="gallery-heading">Recent work</h2>
+          <a class="timelapse-link" href="#timelapses">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" />
+              <path d="m10 8.5 5.5 3.5-5.5 3.5Z" />
+            </svg>
+            Watch print time-lapses
+          </a>
+        </div>
+        <div class="gallery-grid featured-projects">
+          <figure class="gallery-item">
+            <button
+              class="gallery-trigger"
+              type="button"
+              aria-label="Open photo: Shower phone holder">
+              <img
+                src="/images/gallery/shower-phoneholder.webp"
+                alt="3D printed shower phone holder mounted on tile"
+                width="1086"
+                height="1448"
+                loading="lazy" />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
+            <figcaption>
+              <strong>Shower phone holder</strong>
+              <span>
+                A wall-mounted holder keeps a phone off the shower ledge.
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button
+              class="gallery-trigger"
+              type="button"
+              aria-label="Open photo: Switch 2 wall mount">
+              <img
+                src="/images/gallery/switch-2-wallmount.webp"
+                alt="3D printed wall mount for a Nintendo Switch 2"
+                width="1086"
+                height="1448"
+                loading="lazy" />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
+            <figcaption>
+              <strong>Switch 2 wall mount</strong>
+              <span>A fitted wall mount keeps the console off the shelf.</span>
+            </figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button
+              class="gallery-trigger"
+              type="button"
+              aria-label="Open photo: LEGO-style cabinet pulls">
+              <img
+                src="/images/gallery/lego-cabinet-pulls-workbench.webp"
+                alt="Red, blue, and black LEGO-style cabinet pulls on a cutting mat"
+                width="750"
+                height="1000"
+                loading="lazy" />
+              <span class="gallery-open-label" aria-hidden="true">View</span>
+            </button>
+            <figcaption>
+              <strong>LEGO-style cabinet pulls</strong>
+              <span>Custom pulls give a workshop cabinet an easier grip.</span>
+            </figcaption>
+          </figure>
+        </div>
+        <details class="more-projects">
+          <summary>See more prints</summary>
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                aria-label="Open photo: Replacement vacuum nozzle">
+                <img
+                  src="/images/gallery/replacement-vacuum-nozzle.webp"
+                  alt="Purple replacement nozzle clipped onto a vacuum hose"
+                  width="1086"
+                  height="1448"
+                  loading="lazy" />
+                <span class="gallery-open-label" aria-hidden="true">View</span>
+              </button>
+              <figcaption>Replacement vacuum nozzle</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                aria-label="Open photo: Life-sized BD-1 model">
+                <img
+                  src="/images/gallery/Gambody-BD-1-lifesized.webp"
+                  alt="Life-sized 3D printed BD-1 droid model"
+                  width="750"
+                  height="1000"
+                  loading="lazy" />
+                <span class="gallery-open-label" aria-hidden="true">View</span>
+              </button>
+              <figcaption>Life-sized BD-1 model</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                aria-label="Open photo: HomePod wall mount">
+                <img
+                  src="/images/gallery/apple-homepod-wallmount.webp"
+                  alt="3D printed wall mount for an Apple HomePod"
+                  width="750"
+                  height="1000"
+                  loading="lazy" />
+                <span class="gallery-open-label" aria-hidden="true">View</span>
+              </button>
+              <figcaption>HomePod wall mount</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                aria-label="Open photo: Monster cable holders">
+                <img
+                  src="/images/gallery/monster-cable-holders-family.webp"
+                  alt="Four colorful 3D printed monster cable holders arranged as a product family"
+                  width="750"
+                  height="750"
+                  loading="lazy" />
+                <span class="gallery-open-label" aria-hidden="true">View</span>
+              </button>
+              <figcaption>Monster cable-holder color options</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                aria-label="Open photo: Monster cable-holder print detail">
+                <img
+                  src="/images/gallery/monster-cable-holders-detail.webp"
+                  alt="Close-up of a blue 3D printed monster cable holder showing its layered detail"
+                  width="750"
+                  height="750"
+                  loading="lazy" />
+                <span class="gallery-open-label" aria-hidden="true">View</span>
+              </button>
+              <figcaption>Clean layered detail</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                aria-label="Open photo: Monster cable holder in use">
+                <img
+                  src="/images/gallery/monster-cable-holders-in-use.webp"
+                  alt="Green 3D printed monster cable holder organizing a charging cable"
+                  width="750"
+                  height="750"
+                  loading="lazy" />
+                <span class="gallery-open-label" aria-hidden="true">View</span>
+              </button>
+              <figcaption>Cable holder in use</figcaption>
+            </figure>
+          </div>
+        </details>
       </section>
 
       <section
@@ -350,10 +539,7 @@
 
       <section id="services" class="section">
         <div class="section-heading">
-          <p class="eyebrow">What I print</p>
-          <h2>
-            Almost anything you can imagine—within the limits of 3D printing.
-          </h2>
+          <h2>What I print</h2>
         </div>
         <div class="cards service-cards">
           <article class="card">
@@ -421,8 +607,7 @@
 
       <section id="process" class="section split">
         <div>
-          <p class="eyebrow">How it works</p>
-          <h2>How it works.</h2>
+          <h2>How it works</h2>
           <p>
             Start with the problem. I’ll check whether it is printable, then we
             can work out material, timing, and price.
@@ -521,139 +706,6 @@
               </tr>
             </tbody>
           </table>
-        </div>
-      </section>
-
-      <section
-        id="gallery"
-        class="section gallery"
-        aria-labelledby="gallery-heading">
-        <div class="section-heading">
-          <p class="eyebrow">Recent prints</p>
-          <h2 id="gallery-heading">A few things I’ve made.</h2>
-          <p>Functional parts, mounts, figures, and display pieces.</p>
-        </div>
-        <div class="gallery-grid">
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              aria-label="Open photo: Life-sized BD-1 model">
-              <img
-                src="/images/gallery/Gambody-BD-1-lifesized.webp"
-                alt="Life-sized 3D printed BD-1 droid model"
-                width="750"
-                height="1000"
-                loading="lazy" />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>Life-sized BD-1 model</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              aria-label="Open photo: HomePod wall mount">
-              <img
-                src="/images/gallery/apple-homepod-wallmount.webp"
-                alt="3D printed wall mount for an Apple HomePod"
-                width="750"
-                height="1000"
-                loading="lazy" />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>HomePod wall mount</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              aria-label="Open photo: LEGO-style cabinet pulls">
-              <img
-                src="/images/gallery/lego-cabinet-pulls-workbench.webp"
-                alt="3D printed LEGO-style cabinet pulls installed on a workbench"
-                width="750"
-                height="1000"
-                loading="lazy" />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>LEGO-style cabinet pulls</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              aria-label="Open photo: Shower phone holder">
-              <img
-                src="/images/gallery/shower-phoneholder.webp"
-                alt="3D printed shower phone holder mounted on tile"
-                width="750"
-                height="1000"
-                loading="lazy" />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>Shower phone holder</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              aria-label="Open photo: Switch 2 wall mount">
-              <img
-                src="/images/gallery/switch-2-wallmount.webp"
-                alt="3D printed wall mount for a Nintendo Switch 2"
-                width="750"
-                height="1000"
-                loading="lazy" />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>Switch 2 wall mount</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              aria-label="Open photo: Monster cable holders">
-              <img
-                src="/images/gallery/monster-cable-holders-family.webp"
-                alt="Four colorful 3D printed monster cable holders arranged as a product family"
-                width="750"
-                height="750"
-                loading="lazy" />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>Monster cable-holder color options</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              aria-label="Open photo: Monster cable-holder print detail">
-              <img
-                src="/images/gallery/monster-cable-holders-detail.webp"
-                alt="Close-up of a blue 3D printed monster cable holder showing its layered detail"
-                width="750"
-                height="750"
-                loading="lazy" />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>Clean layered detail</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button
-              class="gallery-trigger"
-              type="button"
-              aria-label="Open photo: Monster cable holder in use">
-              <img
-                src="/images/gallery/monster-cable-holders-in-use.webp"
-                alt="Green 3D printed monster cable holder organizing a charging cable"
-                width="750"
-                height="750"
-                loading="lazy" />
-              <span class="gallery-open-label" aria-hidden="true">View</span>
-            </button>
-            <figcaption>Cable holder in use</figcaption>
-          </figure>
         </div>
       </section>
 
@@ -783,46 +835,45 @@
 
       <section class="section faq" aria-labelledby="faq-heading">
         <div class="section-heading">
-          <p class="eyebrow">Questions</p>
-          <h2 id="faq-heading">Common questions.</h2>
+          <h2 id="faq-heading">Common questions</h2>
         </div>
         <div class="faq-grid">
-          <article class="card">
-            <h3>Do I need a 3D file?</h3>
+          <details>
+            <summary>Do I need a 3D file?</summary>
             <p>
               No. A photo, broken part, sketch, rough measurement, or simple
               description is plenty. STL, 3MF, and OBJ files are welcome if you
               have them.
             </p>
-          </article>
-          <article class="card">
-            <h3>What materials can you print?</h3>
+          </details>
+          <details>
+            <summary>What materials can you print?</summary>
             <p>Usually PLA, PETG, or TPU. ABS/ASA by request.</p>
-          </article>
-          <article class="card">
-            <h3>How much does a print cost?</h3>
+          </details>
+          <details>
+            <summary>How much does a print cost?</summary>
             <p>
               Small simple prints are often $10–$25. Larger jobs get quoted.
             </p>
-          </article>
-          <article class="card">
-            <h3>Can you help if I only have an idea?</h3>
+          </details>
+          <details>
+            <summary>Can you help if I only have an idea?</summary>
             <p>Yes. Send the idea, rough dimensions, photos, or a sketch.</p>
-          </article>
-          <article class="card">
-            <h3>Do you offer pickup or shipping?</h3>
+          </details>
+          <details>
+            <summary>Do you offer pickup or shipping?</summary>
             <p>
               Yes. Local pickup in Rhode Island. Small shipped orders by
               request.
             </p>
-          </article>
-          <article class="card">
-            <h3>What projects are not a good fit?</h3>
+          </details>
+          <details>
+            <summary>What projects are not a good fit?</summary>
             <p>
               I’ll say no to unsafe, restricted, or unsuitable prints, and I’ll
               recommend another process when 3D printing is the wrong tool.
             </p>
-          </article>
+          </details>
         </div>
       </section>
 
@@ -917,42 +968,41 @@
 
     <footer class="site-footer">
       <address class="footer-contact">
-        <strong class="brand-name">Robinson PrintWorks</strong>
-        <br />
-        <span>Service-area 3D printing in Rhode Island</span>
-        <br />
-        <span>Local pickup by arrangement</span>
-        <br />
-        <a href="tel:+15088280090">(508)&nbsp;828&#8209;0090</a>
-        <br />
-        <a
-          class="js-email-link js-email-text"
-          href="#quote"
-          data-user="adam"
-          data-domain="adamrobinson.tech">
-          Email Adam
-        </a>
-        <br />
-        <a
-          href="https://www.instagram.com/robinson_printworks/"
-          target="_blank"
-          rel="noopener noreferrer">
-          Follow @robinson_printworks on Instagram
-        </a>
-        <br />
-        <a
-          href="https://www.facebook.com/profile.php?id=61593226775979"
-          target="_blank"
-          rel="noopener noreferrer">
-          Follow Robinson PrintWorks on Facebook
-        </a>
-        <br />
-        <a
-          href="https://nextdoor.com/page/robinson-printworks-cranston-ri/"
-          target="_blank"
-          rel="noopener noreferrer">
-          Find Robinson PrintWorks on Nextdoor
-        </a>
+        <div>
+          <strong class="brand-name">Robinson PrintWorks</strong>
+          <span>Custom 3D printing in Rhode Island</span>
+          <span>Local pickup by arrangement</span>
+        </div>
+        <div>
+          <a href="tel:+15088280090">(508)&nbsp;828&#8209;0090</a>
+          <a
+            class="js-email-link js-email-text"
+            href="#quote"
+            data-user="adam"
+            data-domain="adamrobinson.tech">
+            Email Adam
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.instagram.com/robinson_printworks/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Instagram
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61593226775979"
+            target="_blank"
+            rel="noopener noreferrer">
+            Facebook
+          </a>
+          <a
+            href="https://nextdoor.com/page/robinson-printworks-cranston-ri/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Nextdoor
+          </a>
+        </div>
       </address>
       <p>
         &copy;
