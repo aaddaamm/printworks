@@ -538,7 +538,6 @@
             <button
               class="gallery-trigger"
               type="button"
-              data-gallery-index="0"
               aria-label="Open photo: Life-sized BD-1 model">
               <img
                 src="/images/gallery/Gambody-BD-1-lifesized.webp"
@@ -554,7 +553,6 @@
             <button
               class="gallery-trigger"
               type="button"
-              data-gallery-index="1"
               aria-label="Open photo: HomePod wall mount">
               <img
                 src="/images/gallery/apple-homepod-wallmount.webp"
@@ -570,7 +568,6 @@
             <button
               class="gallery-trigger"
               type="button"
-              data-gallery-index="2"
               aria-label="Open photo: LEGO-style cabinet pulls">
               <img
                 src="/images/gallery/lego-cabinet-pulls-workbench.webp"
@@ -586,7 +583,6 @@
             <button
               class="gallery-trigger"
               type="button"
-              data-gallery-index="3"
               aria-label="Open photo: Shower phone holder">
               <img
                 src="/images/gallery/shower-phoneholder.webp"
@@ -602,7 +598,6 @@
             <button
               class="gallery-trigger"
               type="button"
-              data-gallery-index="4"
               aria-label="Open photo: Switch 2 wall mount">
               <img
                 src="/images/gallery/switch-2-wallmount.webp"
@@ -618,7 +613,6 @@
             <button
               class="gallery-trigger"
               type="button"
-              data-gallery-index="5"
               aria-label="Open photo: Monster cable holders">
               <img
                 src="/images/gallery/monster-cable-holders-family.webp"
@@ -634,7 +628,6 @@
             <button
               class="gallery-trigger"
               type="button"
-              data-gallery-index="6"
               aria-label="Open photo: Monster cable-holder print detail">
               <img
                 src="/images/gallery/monster-cable-holders-detail.webp"
@@ -650,7 +643,6 @@
             <button
               class="gallery-trigger"
               type="button"
-              data-gallery-index="7"
               aria-label="Open photo: Monster cable holder in use">
               <img
                 src="/images/gallery/monster-cable-holders-in-use.webp"
@@ -985,19 +977,21 @@
         node.textContent = `${node.dataset.user}@${node.dataset.domain}`;
       });
 
-      const galleryItems = Array.from(
+      const galleryTriggers = Array.from(
         document.querySelectorAll(".gallery-trigger"),
-      ).map((trigger) => {
+      );
+      const galleryItems = galleryTriggers.map((trigger) => {
         const image = trigger.querySelector("img");
-        const caption =
-          trigger.parentElement.querySelector("figcaption").textContent;
+        const caption = trigger.parentElement.querySelector("figcaption");
 
         return {
           src: image.currentSrc || image.src,
           alt: image.alt,
-          width: image.width,
-          height: image.height,
-          caption,
+          width: Number(image.getAttribute("width")),
+          height: Number(image.getAttribute("height")),
+          caption: (
+            caption.querySelector("strong") ?? caption
+          ).textContent.trim(),
         };
       });
 
@@ -1029,9 +1023,9 @@
         closeGallery.focus();
       }
 
-      document.querySelectorAll(".gallery-trigger").forEach((trigger) => {
+      galleryTriggers.forEach((trigger, index) => {
         trigger.addEventListener("click", () => {
-          openGallery(Number(trigger.dataset.galleryIndex), trigger);
+          openGallery(index, trigger);
         });
       });
 

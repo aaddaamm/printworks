@@ -14,19 +14,19 @@
     node.textContent = `${node.dataset.user}@${node.dataset.domain}`;
   });
 
-  const galleryItems = Array.from(
+  const galleryTriggers = Array.from(
     document.querySelectorAll(".gallery-trigger"),
-  ).map((trigger) => {
+  );
+  const galleryItems = galleryTriggers.map((trigger) => {
     const image = trigger.querySelector("img");
-    const caption =
-      trigger.parentElement.querySelector("figcaption").textContent;
+    const caption = trigger.parentElement.querySelector("figcaption");
 
     return {
       src: image.currentSrc || image.src,
       alt: image.alt,
-      width: image.width,
-      height: image.height,
-      caption,
+      width: Number(image.getAttribute("width")),
+      height: Number(image.getAttribute("height")),
+      caption: (caption.querySelector("strong") ?? caption).textContent.trim(),
     };
   });
 
@@ -57,9 +57,9 @@
     closeGallery.focus();
   }
 
-  document.querySelectorAll(".gallery-trigger").forEach((trigger) => {
+  galleryTriggers.forEach((trigger, index) => {
     trigger.addEventListener("click", () => {
-      openGallery(Number(trigger.dataset.galleryIndex), trigger);
+      openGallery(index, trigger);
     });
   });
 
